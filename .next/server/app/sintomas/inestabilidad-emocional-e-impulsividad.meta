@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/sintomas/layout,_N_T_/sintomas/[slug]/layout,_N_T_/sintomas/[slug]/page,_N_T_/sintomas/inestabilidad-emocional-e-impulsividad"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/sintomas/$d$slug/__PAGE__",
+    "/sintomas/$d$slug",
+    "/sintomas",
+    "/_index",
+    "/_head"
+  ]
+}

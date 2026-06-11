@@ -1,0 +1,3 @@
+{
+  "/enfermedades/[slug]/page": "app/enfermedades/[slug]/page.js"
+}

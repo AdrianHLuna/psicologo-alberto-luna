@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/aviso-de-privacidad/page": "/aviso-de-privacidad",
+  "/contacto/page": "/contacto",
+  "/enfermedades/[slug]/page": "/enfermedades/[slug]",
+  "/enfermedades/page": "/enfermedades",
+  "/page": "/",
+  "/servicios/[slug]/page": "/servicios/[slug]",
+  "/servicios/page": "/servicios",
+  "/sintomas/[slug]/page": "/sintomas/[slug]",
+  "/sintomas/page": "/sintomas",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

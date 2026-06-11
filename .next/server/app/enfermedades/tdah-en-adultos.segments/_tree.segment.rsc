@@ -1,0 +1,2 @@
+:HL["/_next/static/chunks/01.jp2vuspzw9.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"enfermedades","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"tdah-en-adultos","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"N6aQ8x_lLI3qtk9DmxF0K"}
