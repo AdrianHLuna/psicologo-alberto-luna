@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 import { symptoms } from "@/data/symptoms";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "http://localhost:3021";
+  const baseUrl = "http://localhost:3000";
 
   // Static routes
   const staticRoutes = ["", "/enfermedades", "/servicios", "/sintomas", "/contacto", "/aviso-de-privacidad"].map(

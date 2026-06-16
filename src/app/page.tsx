@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { doctor } from "@/data/doctor";
 import { diseases } from "@/data/diseases";
 import { services } from "@/data/services";
@@ -15,6 +15,16 @@ export default function HomePage() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
   const homeDiseases = diseases.filter(d => ["depresion", "ansiedad", "estres", "toc", "tdah"].includes(d.id));
   const [activeTab, setActiveTab] = useState("depresion");
+
+  const heroImages = ["/hero.jpeg", "/hero-2.jpeg", "/hero-3.jpeg"];
+  const [currentHero, setCurrentHero] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHero((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   // Schema: PsychologyWebPage
   const webPageSchema = {
@@ -37,7 +47,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "Psychologist",
     "name": doctor.name,
-    "image": "http://localhost:3021/images/doctor.jpg",
+    "image": "http://localhost:3000/logo-1.jpeg",
     "telephone": doctor.phone,
     "email": doctor.email,
     "address": {
@@ -120,30 +130,54 @@ export default function HomePage() {
               </FadeUp>
             </div>
 
-            {/* Right Column: Premium Photo Container with Psychologist photo placeholder */}
+            {/* Right Column: Premium Photo Container with Psychologist photo slideshow */}
             <div className="lg:col-span-5 flex justify-center w-full">
               <FadeUp delay={0.2} className="w-full max-w-sm">
                 <div className="relative aspect-[3/4] w-full rounded-[2.5rem] bg-stone-950 border border-teal-500/15 overflow-hidden group shadow-2xl shadow-teal-500/5 hover:border-teal-500/30 transition-all duration-500">
-                  {/* Subtle lighting overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/20 to-transparent z-10" />
-                  <div className="absolute -inset-10 bg-[radial-gradient(circle,rgba(15,118,110,0.12)_0%,transparent_70%)] animate-pulse-slow pointer-events-none" />
+                  {heroImages.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className={`absolute inset-0 transition-opacity duration-1000 ${
+                        idx === currentHero ? "opacity-100 z-0" : "opacity-0 -z-10"
+                      }`}
+                    >
+                      <Image
+                        src={img}
+                        alt={`${doctor.name} - Imagen ${idx + 1}`}
+                        fill
+                        priority={idx === 0}
+                        sizes="(max-width: 1024px) 100vw, 400px"
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                   
-                  {/* Silhouette and Explicit Placeholder text */}
-                  <div className="absolute inset-0 flex flex-col justify-end items-center pb-12 z-20">
-                    <span className="text-6xl mb-4 animate-float-slow select-none filter drop-shadow-[0_10px_15px_rgba(15,118,110,0.2)]">🧠</span>
-                    <span className="text-[10px] font-extrabold text-teal-400 uppercase tracking-widest bg-teal-500/10 border border-teal-500/20 px-4 py-2 rounded-full backdrop-blur-md">
-                      Fotografía del Psicólogo
-                    </span>
-                    <span className="text-xs text-stone-300 mt-3 font-semibold">
+                  {/* Subtle lighting overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/40 to-transparent z-10 pointer-events-none" />
+                  
+                  {/* Details Overlay */}
+                  <div className="absolute inset-0 flex flex-col justify-end items-center pb-8 z-20 pointer-events-none">
+                    <span className="text-xs text-white font-extrabold tracking-wide uppercase px-4 py-1.5 bg-stone-900/60 rounded-full border border-teal-500/20 backdrop-blur-xs shadow-md">
                       {doctor.name}
                     </span>
-                    <span className="text-[9px] text-stone-500 font-bold uppercase tracking-widest mt-1">
+                    <span className="text-[9px] text-teal-400 font-bold uppercase tracking-widest mt-2">
                       Cédula {doctor.cedula} • UNAM
                     </span>
                   </div>
 
-                  {/* Clean micro-grid inside frame */}
-                  <div className="absolute inset-0 bg-grid-white/[0.01] pointer-events-none" />
+                  {/* Interactive Dot Selectors */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+                    {heroImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentHero(idx)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                          idx === currentHero ? "bg-teal-400 w-4" : "bg-white/50 hover:bg-white"
+                        }`}
+                        aria-label={`Ir a imagen ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </FadeUp>
             </div>
@@ -208,9 +242,14 @@ export default function HomePage() {
             {/* Profile Image card and Stats (5 cols) */}
             <div className="lg:col-span-5 flex flex-col items-center">
               <FadeUp className="relative bg-white p-4 rounded-3xl border border-stone-200/40 shadow-sm w-full max-w-sm">
-                <div className="w-full h-80 bg-stone-50 rounded-2xl flex items-center justify-center text-stone-400 text-4xl relative overflow-hidden border border-stone-200/50">
-                  <div className="absolute w-36 h-36 rounded-full bg-teal-500/10 blur-xl animate-pulse" />
-                  🧠
+                <div className="w-full h-[420px] bg-stone-100 rounded-2xl relative overflow-hidden border border-stone-200/50">
+                  <Image
+                    src="/aboutme.jpeg"
+                    alt={doctor.name}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 400px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-stone-900 text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center border border-stone-800">
                   <span className="text-2xl font-black text-teal-400">+1,000</span>

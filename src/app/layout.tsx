@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${doctor.name} | ${doctor.specialistTitle} en Tuxtla Gutiérrez`,
     description: doctor.bio.substring(0, 155) + "...",
-    url: "http://localhost:3021",
+    url: "http://localhost:3000",
     siteName: doctor.name,
     locale: "es_MX",
     type: "website",

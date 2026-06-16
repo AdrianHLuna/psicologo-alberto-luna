@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { doctor } from "@/data/doctor";
 import { diseases } from "@/data/diseases";
 import { services } from "@/data/services";
@@ -22,10 +23,23 @@ export default function Footer() {
           
           {/* Main info (5 cols) */}
           <div className="lg:col-span-5">
-            <span className="inline-flex items-center gap-1.5 bg-teal-500/10 border border-teal-500/30 text-teal-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-md mb-4">
-              <FaBrain size={10} /> {doctor.specialty}
-            </span>
-            <h3 className="text-white text-2xl font-black tracking-tight mb-4">{doctor.name}</h3>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-stone-800">
+                <Image
+                  src="/logo-2.jpeg"
+                  alt={doctor.name}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <span className="inline-flex items-center gap-1.5 bg-teal-500/10 border border-teal-500/30 text-teal-400 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-md mb-1">
+                  {doctor.specialty}
+                </span>
+                <h3 className="text-white text-lg font-black tracking-tight">{doctor.name}</h3>
+              </div>
+            </div>
             <p className="text-stone-400 text-sm mb-6 max-w-sm leading-relaxed">
               Egresado de la UNAM. Especialista en psicoterapia individual para adolescentes y adultos, orientación vocacional y sentido de vida con enfoque cognitivo-conductual.
             </p>

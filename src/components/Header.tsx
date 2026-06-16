@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { doctor } from "@/data/doctor";
 import { useState } from "react";
-import { FaBars, FaTimes, FaWhatsapp, FaPhone, FaBrain } from "react-icons/fa";
+import { FaBars, FaTimes, FaWhatsapp, FaPhone } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,14 +32,24 @@ export default function Header() {
 
       {/* Main Navbar */}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
-          <span className="text-lg md:text-xl font-extrabold text-stone-800 leading-none tracking-tight flex items-center gap-2">
-            <span className="text-teal-600"><FaBrain className="w-5 h-5" /></span>
-            {doctor.name}
-          </span>
-          <span className="text-[10px] md:text-xs font-bold text-amber-600 uppercase tracking-widest mt-1.5">
-            {doctor.specialistTitle}
-          </span>
+        <Link href="/" className="flex items-center gap-3">
+          <div className="relative w-10 h-10 rounded-xl overflow-hidden shrink-0 border border-stone-200">
+            <Image
+              src="/logo-1.jpeg"
+              alt={doctor.name}
+              fill
+              sizes="40px"
+              className="object-cover"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-base md:text-lg font-extrabold text-stone-800 leading-none tracking-tight">
+              {doctor.name}
+            </span>
+            <span className="text-[9px] md:text-[10px] font-bold text-amber-600 uppercase tracking-widest mt-1">
+              {doctor.specialistTitle}
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
