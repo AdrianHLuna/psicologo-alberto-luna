@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { services } from "@/data/services";
 import { doctor } from "@/data/doctor";
@@ -80,6 +81,20 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Content (8 cols) */}
           <div className="lg:col-span-8 space-y-8">
+            {/* Service Banner Image */}
+            <FadeUp className="bg-white p-4 rounded-3xl border border-stone-200/50 shadow-xs">
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden border border-stone-100 shadow-sm">
+                <Image
+                  src={s.image}
+                  alt={s.name}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="object-cover"
+                />
+              </div>
+            </FadeUp>
+
             {s.slug === "perfiles-vocacionales-metodo-raices-y-alas" ? (
               <>
                 {/* Custom Raíces y Alas design */}

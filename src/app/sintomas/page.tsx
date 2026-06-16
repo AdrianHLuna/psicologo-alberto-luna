@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { symptoms } from "@/data/symptoms";
 import { doctor } from "@/data/doctor";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -76,8 +77,14 @@ export default function SymptomsPage() {
                   <FadeUp key={s.id} className="bg-white border border-stone-200/50 p-6 sm:p-8 rounded-3xl shadow-xs hover:border-teal-500/20 transition-all">
                     <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                       <div className="flex gap-4 items-start w-full">
-                        <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 text-xl font-bold border border-teal-100">
-                          <FaBrain />
+                        <div className="w-16 h-16 rounded-2xl bg-stone-100 flex items-center justify-center shrink-0 border border-stone-200/50 overflow-hidden relative">
+                          <Image
+                            src={s.image}
+                            alt={s.name}
+                            fill
+                            sizes="(max-width: 768px) 64px, 64px"
+                            className="object-cover transition-transform duration-300 hover:scale-105"
+                          />
                         </div>
                         <div className="flex-1 min-w-0">
                           <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest block mb-1">Motivo de Consulta</span>

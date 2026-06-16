@@ -25,7 +25,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "$400 - $500 MXN por sesión",
     relatedConditions: ["depresion-mayor", "ansiedad-generalizada", "estres-postraumatico", "trastorno-obsesivo-compulsivo", "tdah-en-adultos"],
-    image: "/images/service-therapy.jpg",
+    image: "/servicios/psicoterapia.png",
     seo: {
       title: "Psicoterapia Individual en Tuxtla | Psic. Alberto Luna",
       description: "Consulta de psicoterapia individual para adolescentes y adultos en Tuxtla Gutiérrez. Supera la ansiedad y sana tu historia.",
@@ -56,7 +56,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "$500 MXN por sesión",
     relatedConditions: ["depresion-mayor", "estres-postraumatico"],
-    image: "/images/service-crisis.jpg",
+    image: "/servicios/acompañamiento_crisis_existenciales_transiciones.png",
     seo: {
       title: "Acompañamiento en Crisis Existenciales | Psic. Alberto Luna",
       description: "Supera la crisis de los 20 y 30 años. Encuentra tu sentido de vida y Ikigai mediante psicoterapia existencial en Tuxtla.",
@@ -87,7 +87,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "Paquete completo (todas las sesiones y reporte escrito): $2,200 MXN",
     relatedConditions: ["tdah-en-adultos", "ansiedad-generalizada"],
-    image: "/images/service-vocational.jpg",
+    image: "/servicios/perfiles_vocacionales.png",
     seo: {
       title: "Orientación Vocacional Método Raíces y Alas | Beto Luna",
       description: "Proceso completo de orientación vocacional en Tuxtla Gutiérrez. Eneagrama, Ikigai y plan de carrera para jóvenes y adultos.",
@@ -118,7 +118,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "$250 - $400 MXN por participante",
     relatedConditions: ["ansiedad-generalizada", "tdah-en-adultos"],
-    image: "/images/service-workshops.jpg",
+    image: "/servicios/talleres_psicoeducativos_vivenciales.png",
     seo: {
       title: "Talleres Psicoeducativos en Tuxtla | Psic. Alberto Luna",
       description: "Talleres grupales para padres e hijos. Aprende a poner límites sanos y a estructurar tus metas en Chiapas.",
@@ -149,7 +149,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "A cotizar según número de asistentes y viáticos",
     relatedConditions: ["ansiedad-generalizada", "depresion-mayor", "tdah-en-adultos"],
-    image: "/images/service-conferences.jpg",
+    image: "/servicios/conferencias.png",
     seo: {
       title: "Conferencias de Salud Mental y Burnout | Beto Luna",
       description: "Charlas y conferencias para escuelas y empresas en Chiapas. Gestión del estrés laboral y salud mental digital.",
@@ -180,7 +180,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "$500 MXN por sesión",
     relatedConditions: ["ansiedad-generalizada", "trastorno-obsesivo-compulsivo"],
-    image: "/images/service-regulation.jpg",
+    image: "/servicios/regulacion_emocional.png",
     seo: {
       title: "Entrenamiento en Regulación Emocional | Psic. Alberto Luna",
       description: "Aprende técnicas rápidas para controlar el enojo, la impulsividad y calmar ataques de pánico. Sesiones prácticas en Tuxtla.",
@@ -211,7 +211,7 @@ export const services: MedicalService[] = [
     ],
     priceRange: "$600 MXN por sesión",
     relatedConditions: ["depresion-mayor", "ansiedad-generalizada"],
-    image: "/images/service-single.jpg",
+    image: "/servicios/asesorias_psicologicas.png",
     seo: {
       title: "Asesoría Psicológica de Sesión Única | Beto Luna",
       description: "Consulta rápida y estratégica para tomar decisiones complejas o resolver conflictos inmediatos en Tuxtla. Entrega de pautas.",

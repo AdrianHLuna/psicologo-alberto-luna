@@ -321,6 +321,64 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── FEATURED SERVICES SECTION ─── */}
+      <section className="py-24 bg-stone-100 border-y border-stone-200/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-teal-700 font-extrabold text-xs uppercase tracking-widest mb-3 inline-block">Nuestros Servicios</span>
+            <h2 className="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mb-5">Servicios de Acompañamiento Psicológico</h2>
+            <p className="text-stone-500 text-xs sm:text-sm leading-relaxed">
+              Ofrecemos procesos terapéuticos y de orientación adaptados a tus necesidades individuales, con un enfoque clínico y de sustento científico.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {services.slice(0, 4).map((s) => {
+              let label = "Psicoterapia";
+              if (s.type === "ambulatorio") label = "Talleres y Grupos";
+              if (s.type === "hospitalario") label = "Conferencias";
+
+              return (
+                <FadeUp key={s.id} className="bg-white border border-stone-200/50 rounded-3xl shadow-xs flex flex-col justify-between hover:border-teal-500/20 transition-all overflow-hidden">
+                  <div>
+                    <div className="relative w-full h-40 border-b border-stone-100 overflow-hidden">
+                      <Image
+                        src={s.image}
+                        alt={s.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 25vw"
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block mb-2">{label}</span>
+                      <h3 className="text-base font-bold text-stone-900 mb-2 leading-tight">{s.name}</h3>
+                      <p className="text-stone-500 text-[11px] leading-relaxed mb-4">
+                        {s.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-6 pt-0">
+                    <div className="border-t border-stone-100 pt-4">
+                      <Link href={`/servicios/${s.slug}`} className="w-full inline-flex justify-center items-center gap-1.5 bg-teal-600 text-white font-bold text-xs px-4 py-2.5 rounded-xl hover:bg-teal-700 transition-colors">
+                        Ver Detalles &rarr;
+                      </Link>
+                    </div>
+                  </div>
+                </FadeUp>
+              );
+            })}
+          </div>
+
+          <div className="mt-16 text-center">
+            <Link href="/servicios" className="inline-flex items-center gap-2 bg-stone-900 hover:bg-stone-850 text-white font-bold text-xs px-8 py-4 rounded-xl transition duration-150 uppercase tracking-wider">
+              Ver Todos los Servicios &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── VOCATIONAL SECTION: Método "Raíces y Alas" (Sección Destacada de Gran Formato) ─── */}
       <section className="py-24 bg-stone-900 text-stone-100 relative border-y border-stone-850">
         <div className="absolute top-10 right-10 w-[250px] h-[250px] rounded-full blur-[80px] -z-10 glow-bubble-teal pointer-events-none" />
@@ -414,9 +472,15 @@ export default function HomePage() {
               <div className="space-y-4">
                 {sphere.items.map((item) => (
                   <div key={item.id} className="group flex items-start gap-3.5">
-                    <span className="w-5 h-5 rounded-full bg-teal-50 border border-teal-200/60 text-teal-600 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 group-hover:bg-teal-600 group-hover:text-white transition duration-200">
-                      ?
-                    </span>
+                    <div className="w-12 h-12 rounded-xl border border-stone-250/60 overflow-hidden shrink-0 relative mt-0.5 shadow-sm">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        sizes="48px"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                     <div>
                       <h4 className="text-sm font-bold text-stone-900 mb-1 group-hover:text-teal-700 transition">
                         {item.name}

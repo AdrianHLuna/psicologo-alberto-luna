@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { services } from "@/data/services";
 import { doctor } from "@/data/doctor";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -42,22 +43,32 @@ export default function ServicesPage() {
             if (s.type === "hospitalario") label = "Conferencias y Empresas";
 
             return (
-              <FadeUp key={s.id} className="bg-white border border-stone-200/50 p-6 rounded-3xl shadow-xs flex flex-col justify-between hover:border-teal-500/20 transition-all">
+              <FadeUp key={s.id} className="bg-white border border-stone-200/50 rounded-3xl shadow-xs flex flex-col justify-between hover:border-teal-500/20 transition-all overflow-hidden">
                 <div>
-                  <div className="w-10 h-10 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 text-lg border border-teal-100">
-                    <FaBrain />
+                  <div className="relative w-full h-40 border-b border-stone-100 overflow-hidden">
+                    <Image
+                      src={s.image}
+                      alt={s.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                    />
                   </div>
-                  <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block mb-2">{label}</span>
-                  <h2 className="text-lg font-bold text-stone-900 mb-2 leading-tight">{s.name}</h2>
-                  <p className="text-stone-500 text-xs leading-relaxed mb-6">
-                    {s.description}
-                  </p>
+                  <div className="p-6">
+                    <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block mb-2">{label}</span>
+                    <h2 className="text-lg font-bold text-stone-900 mb-2 leading-tight">{s.name}</h2>
+                    <p className="text-stone-500 text-xs leading-relaxed mb-4">
+                      {s.description}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="border-t border-stone-100 pt-4 mt-6">
-                  <Link href={`/servicios/${s.slug}`} className="w-full inline-flex justify-center items-center gap-1.5 bg-teal-600 text-white font-bold text-xs px-4 py-2.5 rounded-xl hover:bg-teal-700 transition-colors">
-                    Ver Detalles <FaArrowRight size={8} />
-                  </Link>
+                <div className="p-6 pt-0">
+                  <div className="border-t border-stone-100 pt-4">
+                    <Link href={`/servicios/${s.slug}`} className="w-full inline-flex justify-center items-center gap-1.5 bg-teal-600 text-white font-bold text-xs px-4 py-2.5 rounded-xl hover:bg-teal-700 transition-colors">
+                      Ver Detalles <FaArrowRight size={8} />
+                    </Link>
+                  </div>
                 </div>
               </FadeUp>
             );

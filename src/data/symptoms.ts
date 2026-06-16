@@ -14,7 +14,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Elegir tu carrera o reinventarte profesionalmente no debe dejarse a un test automatizado. Un proceso guiado te ayuda a comprender quién eres (Raíces), alinear tu pasión con la realidad (Ikigai) y estructurar un plan de acción (Alas).",
     relatedConditions: ["tdah-en-adultos", "ansiedad-generalizada"],
-    image: "/images/symptom-vocational.jpg",
+    image: "/motivos_consulta/orientacion_vocacional.png",
     seo: {
       title: "Orientación Vocacional y Sentido de Vida | Beto Luna",
       description: "Descubre tu verdadera vocación y sentido de vida. Supera la indecisión con terapia vocacional especializada en Tuxtla Gutiérrez.",
@@ -33,7 +33,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La terapia ofrece un contenedor seguro para deconstruir las expectativas sociales, definir tus propios estándares de éxito y crear un mapa de vida auténtico y sin culpas.",
     relatedConditions: ["depresion-mayor", "ansiedad-generalizada"],
-    image: "/images/symptom-crisis.jpg",
+    image: "/motivos_consulta/crisis_cuarto_vida.png",
     seo: {
       title: "Crisis de los 20 y 30 Años | Psicólogo Alberto Luna",
       description: "Supera la crisis de cuarto de vida, el vacío existencial y la presión del éxito. Psicoterapia adaptada para jóvenes adultos en Tuxtla.",
@@ -52,7 +52,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Evitar o reprimir el dolor solo prolonga el sufrimiento. Acompañarte clínicamente te ayuda a transitar las etapas del duelo, liberando la culpa y resignificando la pérdida.",
     relatedConditions: ["depresion-mayor", "estres-postraumatico"],
-    image: "/images/symptom-grief.jpg",
+    image: "/motivos_consulta/proceso_duelo_perdidas.png",
     seo: {
       title: "Terapia de Duelo y Pérdidas en Tuxtla | Beto Luna",
       description: "Sana el dolor de una pérdida o ruptura. Espacio psicoterapéutico de apoyo y contención emocional en Tuxtla Gutiérrez.",
@@ -73,7 +73,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Te doto de herramientas prácticas para procesar la separación de manera saludable, establecer un contacto cero constructivo si es necesario, y aprender a regular la ansiedad que genera la distancia.",
     relatedConditions: ["ansiedad-generalizada", "depresion-mayor"],
-    image: "/images/symptom-rupture.jpg",
+    image: "/motivos_consulta/rupturas_amorosas.png",
     seo: {
       title: "Superar Rupturas Amorosas y Distancia | Psic. Beto Luna",
       description: "Aprende a gestionar el duelo por ruptura amorosa o los celos en relaciones a distancia con terapia psicológica en Tuxtla Gutiérrez.",
@@ -92,7 +92,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La psicoterapia te ayuda a desarrollar una asertividad firme para comunicar tus límites con amor, sin culpas y resguardando tu estabilidad mental e individualidad.",
     relatedConditions: ["ansiedad-generalizada", "trastorno-de-adaptacion"],
-    image: "/images/symptom-family.jpg",
+    image: "/motivos_consulta/conflictos_familiares.png",
     seo: {
       title: "Límites con Padres y Conflictos Familiares | Beto Luna",
       description: "Establece límites asertivos con tus padres y sana dinámicas familiares invasivas. Terapia de apoyo familiar en Tuxtla.",
@@ -111,7 +111,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "A través del entrenamiento en asertividad y habilidades interpersonales, aprenderás a desmontar pensamientos de desaprobación y a entablar conexiones reales.",
     relatedConditions: ["fobia-social", "trastorno-personalidad-evitativa"],
-    image: "/images/symptom-solitude.jpg",
+    image: "/motivos_consulta/dificultad_relacionarse_soledad.png",
     seo: {
       title: "Soledad Crónica y Habilidades Sociales | Beto Luna",
       description: "Supera la soledad crónica y la torpeza social. Aprende a crear relaciones profundas y asertivas en Tuxtla Gutiérrez.",
@@ -132,7 +132,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La terapia de burnout te dota de estrategias de desconexión cognitiva, reorganización de prioridades de vida y establecimiento de límites en tu espacio de trabajo.",
     relatedConditions: ["ansiedad-generalizada", "depresion-mayor"],
-    image: "/images/symptom-burnout.jpg",
+    image: "/motivos_consulta/sindrome_burnout.png",
     seo: {
       title: "Tratamiento de Síndrome de Burnout en Tuxtla | Beto Luna",
       description: "Recupera tu energía y supera el estrés por agotamiento laboral (burnout). Terapia cognitiva y manejo de límites en Chiapas.",
@@ -151,7 +151,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La terapia cognitivo-conductual te enseña a identificar las creencias que bloquean tu acción, a regular tu sistema nervioso y a usar herramientas funcionales de enfoque.",
     relatedConditions: ["tdah-en-adultos", "ansiedad-generalizada", "trastorno-obsesivo-compulsivo"],
-    image: "/images/symptom-procrastination.jpg",
+    image: "/motivos_consulta/procrastinacion_extrema.png",
     seo: {
       title: "Terapia para Procrastinación Extrema | Beto Luna",
       description: "Supera la procrastinación crónica y los problemas de enfoque. Aprende técnicas de organización y funciones ejecutivas en Tuxtla.",
@@ -170,7 +170,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Para aprender a internalizar tus logros, deconstruir la voz crítica interna y vivir tu carrera o proyectos con tranquilidad, disfrutando tus éxitos sin temor al juicio.",
     relatedConditions: ["tdah-en-adultos", "ansiedad-generalizada"],
-    image: "/images/symptom-impostor.jpg",
+    image: "/motivos_consulta/sindrome_impostor.png",
     seo: {
       title: "Síndrome del Impostor y Autoexigencia | Psic. Alberto Luna",
       description: "Reduce la autoexigencia destructiva y el perfeccionismo paralizante. Reconcíliate con tus logros académicos y laborales.",
@@ -191,7 +191,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La psicoterapia te ayuda a identificar los sesgos cognitivos sobre tu imagen, a detener los bucles de autocrítica y a cimentar una autoestima basada en el amor propio y la compasión.",
     relatedConditions: ["depresion-mayor", "ansiedad-generalizada"],
-    image: "/images/symptom-selfesteem.jpg",
+    image: "/motivos_consulta/baja_autoestima.png",
     seo: {
       title: "Terapia para Baja Autoestima en Tuxtla | Beto Luna",
       description: "Construye una relación sana contigo mismo. Supera las inseguridades corporales y fortalece tu amor propio con psicoterapia clínica.",
@@ -210,7 +210,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Aprenderás a colocar una pausa reflexiva entre el estímulo y tu reacción. La terapia te brinda herramientas específicas de tolerancia al malestar y control de impulsos.",
     relatedConditions: ["estres-postraumatico", "trastorno-obsesivo-compulsivo"],
-    image: "/images/symptom-instability.jpg",
+    image: "/motivos_consulta/insetabilidad_emocional.png",
     seo: {
       title: "Inestabilidad Emocional e Impulsividad | Psic. Beto Luna",
       description: "Aprende a regular tus emociones y a controlar impulsos. Sal del círculo del autosabotaje y las reacciones explosivas en Tuxtla.",
@@ -229,7 +229,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La terapia de manejo de ira te dota de técnicas de desactivación fisiológica inmediata y reestructuración cognitiva de pensamientos hostiles.",
     relatedConditions: ["ansiedad-generalizada", "trastorno-personalidad-limite"],
-    image: "/images/symptom-anger.jpg",
+    image: "/motivos_consulta/gestion_ira_frustracion.png",
     seo: {
       title: "Manejo de la Ira y Frustración en Tuxtla | Beto Luna",
       description: "Aprende a controlar el enojo y las reacciones explosivas. Terapia de asertividad y regulación de la ira en Tuxtla Gutiérrez.",
@@ -250,7 +250,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "Te acompaño en un proceso estructurado de detox digital y en el rediseño de hábitos saludables para que retomes el control de tu tiempo y atención.",
     relatedConditions: ["tdah-en-adultos", "ansiedad-generalizada"],
-    image: "/images/symptom-screen.jpg",
+    image: "/motivos_consulta/dependencia_pantallas.png",
     seo: {
       title: "Dependencia al Celular y Redes Sociales | Beto Luna",
       description: "Detox digital guiado. Supera la adicción a las pantallas y recupera tu concentración con terapia cognitiva en Tuxtla.",
@@ -269,7 +269,7 @@ export const symptoms: Symptom[] = [
     ],
     whyConsult: "La terapia cognitivo-conductual del insomnio es la intervención de primera línea para reentrenar a tu cerebro, disminuir la hiperalerta nocturna y recuperar el sueño profundo.",
     relatedConditions: ["ansiedad-generalizada", "depresion-mayor"],
-    image: "/images/symptom-insomnia.jpg",
+    image: "/motivos_consulta/insomnio.png",
     seo: {
       title: "Insomnio y Sueño por Ansiedad | Psicólogo Alberto Luna",
       description: "Apaga tu mente por las noches. Recupera el descanso reparador con técnicas cognitivas y de relajación en Tuxtla Gutiérrez.",
