@@ -1,8 +1,4 @@
 {
-  "/contacto/page": "app/contacto/page.js",
-  "/enfermedades/[slug]/page": "app/enfermedades/[slug]/page.js",
   "/enfermedades/page": "app/enfermedades/page.js",
-  "/page": "app/page.js",
-  "/servicios/page": "app/servicios/page.js",
-  "/sintomas/page": "app/sintomas/page.js"
+  "/page": "app/page.js"
 }

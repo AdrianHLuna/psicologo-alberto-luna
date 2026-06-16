@@ -20,7 +20,7 @@ const doctor = {
     subspecialty: "Terapia Cognitivo-Conductual, Eneagrama y Sentido de Vida",
     cedula: "15674825",
     phone: "5635862471",
-    whatsapp: "9615798647",
+    whatsapp: "+52 1 961 579 8647",
     email: "psicologobetoluna@gmail.com",
     address: "Avenida Querétaro N. 28, Colonia Residencial Hacienda (entre Taxco y Guanajuato)",
     city: "Tuxtla Gutiérrez",

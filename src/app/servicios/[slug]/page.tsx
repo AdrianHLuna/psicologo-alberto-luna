@@ -4,7 +4,7 @@ import { services } from "@/data/services";
 import { doctor } from "@/data/doctor";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { FadeUp } from "@/components/Animations";
-import { FaBrain, FaCheckCircle, FaExclamationTriangle, FaArrowLeft, FaWhatsapp } from "react-icons/fa";
+import { FaBrain, FaCheckCircle, FaExclamationTriangle, FaArrowLeft, FaWhatsapp, FaSeedling, FaBalanceScale, FaPaperPlane } from "react-icons/fa";
 import StructuredData from "@/components/StructuredData";
 
 interface PageProps {
@@ -80,15 +80,103 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Content (8 cols) */}
           <div className="lg:col-span-8 space-y-8">
-            {/* Long Description */}
-            <FadeUp className="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs">
-              <h2 className="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2 border-b border-stone-100 pb-3">
-                <FaBrain className="text-teal-600" /> Descripción y Enfoque del Servicio
-              </h2>
-              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4 whitespace-pre-line">
-                {s.longDescription}
-              </p>
-            </FadeUp>
+            {s.slug === "perfiles-vocacionales-metodo-raices-y-alas" ? (
+              <>
+                {/* Custom Raíces y Alas design */}
+                <FadeUp className="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs">
+                  <h2 className="text-xl font-black text-stone-900 mb-4 flex items-center gap-2 border-b border-stone-100 pb-3">
+                    <FaBrain className="text-teal-700 animate-pulse" /> Método "Raíces y Alas"
+                  </h2>
+                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                    Nuestro proceso de orientación vocacional está diseñado para brindarte un mapa de ruta claro hacia tu futuro profesional, analizando tres dimensiones fundamentales del ser humano:
+                  </p>
+                </FadeUp>
+
+                {/* 3 Phases Stepper / Cards */}
+                <div className="space-y-6">
+                  <div className="relative border-l-2 border-teal-200/60 ml-4 pl-8 space-y-8">
+                    {/* Phase 1 */}
+                    <FadeUp className="relative bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs hover:border-teal-500/30 transition-all duration-300">
+                      <span className="absolute -left-[45px] top-6 w-8 h-8 rounded-full bg-teal-50 border-2 border-teal-200 flex items-center justify-center text-teal-700 font-bold text-xs shadow-sm">
+                        01
+                      </span>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b border-stone-100 pb-3">
+                        <div>
+                          <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block">Primera Etapa</span>
+                          <h3 className="text-lg font-black text-stone-900">Fase Raíces: Autoconocimiento Profundo</h3>
+                        </div>
+                        <div className="p-3 bg-teal-50 rounded-2xl text-teal-700 w-fit">
+                          <FaSeedling size={20} />
+                        </div>
+                      </div>
+                      <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Analizamos la estructura profunda de tu personalidad mediante el **Eneagrama Clínico y Psicoterapéutico**. Identificamos tus talentos naturales, motivaciones esenciales, así como miedos inconscientes o creencias limitantes que puedan estar paralizando tu decisión o haciéndote seguir caminos por expectativa ajena.
+                      </p>
+                      <div className="bg-stone-50 p-4 rounded-2xl border border-stone-150/50">
+                        <span className="text-[10px] font-extrabold text-stone-500 uppercase tracking-wider block mb-1">Enfoque Clave</span>
+                        <p className="text-xs text-stone-600 font-semibold">Identificación de motivaciones reales, miedos vocacionales y arquetipos de personalidad.</p>
+                      </div>
+                    </FadeUp>
+
+                    {/* Phase 2 */}
+                    <FadeUp className="relative bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs hover:border-amber-500/30 transition-all duration-300">
+                      <span className="absolute -left-[45px] top-6 w-8 h-8 rounded-full bg-amber-50 border-2 border-amber-200 flex items-center justify-center text-amber-700 font-bold text-xs shadow-sm">
+                        02
+                      </span>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b border-stone-100 pb-3">
+                        <div>
+                          <span className="text-[10px] font-extrabold text-amber-600 uppercase tracking-widest block">Segunda Etapa</span>
+                          <h3 className="text-lg font-black text-stone-900">Fase Ikigai: Alinear Pasión y Realidad</h3>
+                        </div>
+                        <div className="p-3 bg-amber-50 rounded-2xl text-amber-700 w-fit">
+                          <FaBalanceScale size={20} />
+                        </div>
+                      </div>
+                      <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Cruzamos tus talentos innatos con la realidad del entorno laboral. A través de pruebas psicométricas y análisis dinámico de aptitudes, buscamos el punto de equilibrio donde se conecten: lo que te apasiona, en lo que eres bueno, lo que el mundo necesita y lo que es económicamente viable.
+                      </p>
+                      <div className="bg-stone-50 p-4 rounded-2xl border border-stone-150/50">
+                        <span className="text-[10px] font-extrabold text-stone-500 uppercase tracking-wider block mb-1">Enfoque Clave</span>
+                        <p className="text-xs text-stone-600 font-semibold">Cruce de aptitudes, intereses universitarios y viabilidad económica del mercado actual.</p>
+                      </div>
+                    </FadeUp>
+
+                    {/* Phase 3 */}
+                    <FadeUp className="relative bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs hover:border-teal-500/30 transition-all duration-300">
+                      <span className="absolute -left-[45px] top-6 w-8 h-8 rounded-full bg-teal-50 border-2 border-teal-200 flex items-center justify-center text-teal-700 font-bold text-xs shadow-sm">
+                        03
+                      </span>
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b border-stone-100 pb-3">
+                        <div>
+                          <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block">Tercera Etapa</span>
+                          <h3 className="text-lg font-black text-stone-900">Fase Alas: Plan de Acción Profesional</h3>
+                        </div>
+                        <div className="p-3 bg-teal-50 rounded-2xl text-teal-700 w-fit">
+                          <FaPaperPlane size={20} />
+                        </div>
+                      </div>
+                      <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Traducimos el análisis en un mapa estratégico ejecutable. Te entregamos un **Reporte Vocacional escrito** detallado con las opciones de carrera recomendadas, planes de estudio idóneos, perfil de egreso y un plan de acción estratégico paso a paso para que inicies tu camino con seguridad.
+                      </p>
+                      <div className="bg-stone-50 p-4 rounded-2xl border border-stone-150/50">
+                        <span className="text-[10px] font-extrabold text-stone-500 uppercase tracking-wider block mb-1">Enfoque Clave</span>
+                        <p className="text-xs text-stone-600 font-semibold">Entrega de reporte formal, hoja de ruta universitaria/laboral y plan de desarrollo.</p>
+                      </div>
+                    </FadeUp>
+                  </div>
+                </div>
+              </>
+            ) : (
+              /* Long Description */
+              <FadeUp className="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs">
+                <h2 className="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2 border-b border-stone-100 pb-3">
+                  <FaBrain className="text-teal-600" /> Descripción y Enfoque del Servicio
+                </h2>
+                <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-4 whitespace-pre-line">
+                  {s.longDescription}
+                </p>
+              </FadeUp>
+            )}
 
             {/* Benefits & Recommendations */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

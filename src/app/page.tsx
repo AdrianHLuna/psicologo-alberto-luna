@@ -12,7 +12,8 @@ import StructuredData from "@/components/StructuredData";
 
 export default function HomePage() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
-  const [activeTab, setActiveTab] = useState(diseases[0].id);
+  const homeDiseases = diseases.filter(d => ["depresion", "ansiedad", "estres", "toc", "tdah"].includes(d.id));
+  const [activeTab, setActiveTab] = useState("depresion");
 
   // Schema: PsychologyWebPage
   const webPageSchema = {
@@ -150,6 +151,77 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── BIO SECTION: Detailed Psychologist Experience ─── */}
+      <section className="py-24 bg-stone-100 border-y border-stone-200/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Biography text & details (7 cols) */}
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <FadeUp>
+                <span className="text-teal-700 font-extrabold text-xs uppercase tracking-widest mb-3 inline-block">Tu Terapeuta</span>
+                <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight mb-6">{doctor.name}</h2>
+              </FadeUp>
+
+              <FadeUp delay={0.1}>
+                <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-6">
+                  {doctor.bio}
+                </p>
+              </FadeUp>
+
+              {/* Quote philosophy block */}
+              <FadeUp delay={0.2} className="border-l-4 border-amber-600 bg-white p-6 rounded-r-2xl border border-stone-200/30 mb-8 shadow-xs flex gap-4">
+                <FaQuoteLeft className="text-amber-500/20 text-3xl flex-shrink-0" />
+                <p className="text-stone-900 italic font-semibold text-xs leading-relaxed">
+                  "{doctor.philosophy}"
+                </p>
+              </FadeUp>
+
+              {/* Education & Certifications lists */}
+              <FadeUp delay={0.3} className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
+                <div>
+                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Formación Profesional</h4>
+                  <ul className="space-y-3 font-semibold text-stone-550">
+                    {doctor.education.map((e, idx) => (
+                      <li key={idx} className="flex gap-2">
+                         <span className="text-teal-600 font-bold">{e.year}</span>
+                        <span>{e.degree} - <span className="font-bold text-stone-700">{e.institution}</span></span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Acreditaciones y Cursos</h4>
+                  <ul className="space-y-3 font-semibold text-stone-550">
+                    {doctor.certifications.map((c, idx) => (
+                      <li key={idx} className="flex gap-2 items-start">
+                        <span className="text-teal-600">★</span>
+                        <span>{c.name} ({c.institution})</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUp>
+            </div>
+
+            {/* Profile Image card and Stats (5 cols) */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <FadeUp className="relative bg-white p-4 rounded-3xl border border-stone-200/40 shadow-sm w-full max-w-sm">
+                <div className="w-full h-80 bg-stone-50 rounded-2xl flex items-center justify-center text-stone-400 text-4xl relative overflow-hidden border border-stone-200/50">
+                  <div className="absolute w-36 h-36 rounded-full bg-teal-500/10 blur-xl animate-pulse" />
+                  🧠
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-stone-900 text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center border border-stone-800">
+                  <span className="text-2xl font-black text-teal-400">+1,000</span>
+                  <span className="text-[9px] font-bold uppercase tracking-widest text-stone-300">Sesiones Realizadas</span>
+                </div>
+              </FadeUp>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ─── DISORDERS TABS SECTION (Selector Interactivo de Trastornos) ─── */}
       <section className="py-24 max-w-7xl mx-auto px-6 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -163,7 +235,7 @@ export default function HomePage() {
         {/* Tab Selectors */}
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-10 border-b border-stone-200 pb-6">
-            {diseases.map((d) => (
+            {homeDiseases.map((d) => (
               <button
                 key={d.id}
                 onClick={() => setActiveTab(d.id)}
@@ -180,7 +252,7 @@ export default function HomePage() {
 
           {/* Active Tab Content */}
           <div className="bg-white border border-stone-200/60 p-8 sm:p-10 rounded-3xl shadow-sm transition-all duration-300">
-            {diseases.map((d) => {
+            {homeDiseases.map((d) => {
               if (d.id !== activeTab) return null;
               return (
                 <div key={d.id} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in">
@@ -349,77 +421,6 @@ export default function HomePage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* ─── BIO SECTION: Detailed Psychologist Experience ─── */}
-      <section className="py-24 bg-stone-100 border-y border-stone-200/40">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Biography text & details (7 cols) */}
-            <div className="lg:col-span-7 flex flex-col justify-center">
-              <FadeUp>
-                <span className="text-teal-700 font-extrabold text-xs uppercase tracking-widest mb-3 inline-block">Tu Terapeuta</span>
-                <h2 className="text-3xl sm:text-4xl font-black text-stone-900 tracking-tight mb-6">{doctor.name}</h2>
-              </FadeUp>
-
-              <FadeUp delay={0.1}>
-                <p className="text-stone-600 text-xs sm:text-sm leading-relaxed mb-6">
-                  {doctor.bio}
-                </p>
-              </FadeUp>
-
-              {/* Quote philosophy block */}
-              <FadeUp delay={0.2} className="border-l-4 border-amber-600 bg-white p-6 rounded-r-2xl border border-stone-200/30 mb-8 shadow-xs flex gap-4">
-                <FaQuoteLeft className="text-amber-500/20 text-3xl flex-shrink-0" />
-                <p className="text-stone-900 italic font-semibold text-xs leading-relaxed">
-                  "{doctor.philosophy}"
-                </p>
-              </FadeUp>
-
-              {/* Education & Certifications lists */}
-              <FadeUp delay={0.3} className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs">
-                <div>
-                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Formación Profesional</h4>
-                  <ul className="space-y-3 font-semibold text-stone-550">
-                    {doctor.education.map((e, idx) => (
-                      <li key={idx} className="flex gap-2">
-                        <span className="text-teal-600 font-bold">{e.year}</span>
-                        <span>{e.degree} - <span className="font-bold text-stone-700">{e.institution}</span></span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Acreditaciones y Cursos</h4>
-                  <ul className="space-y-3 font-semibold text-stone-550">
-                    {doctor.certifications.map((c, idx) => (
-                      <li key={idx} className="flex gap-2 items-start">
-                        <span className="text-teal-600">★</span>
-                        <span>{c.name} ({c.institution})</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </FadeUp>
-            </div>
-
-            {/* Profile Image card and Stats (5 cols) */}
-            <div className="lg:col-span-5 flex flex-col items-center">
-              <FadeUp className="relative bg-white p-4 rounded-3xl border border-stone-200/40 shadow-sm w-full max-w-sm">
-                <div className="w-full h-80 bg-stone-50 rounded-2xl flex items-center justify-center text-stone-400 text-4xl relative overflow-hidden border border-stone-200/50">
-                  <div className="absolute w-36 h-36 rounded-full bg-teal-500/10 blur-xl animate-pulse" />
-                  🧠
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-stone-900 text-white p-6 rounded-2xl shadow-lg flex flex-col justify-center items-center text-center border border-stone-800">
-                  <span className="text-2xl font-black text-teal-400">+1,000</span>
-                  <span className="text-[9px] font-bold uppercase tracking-widest text-stone-300">Sesiones Realizadas</span>
-                </div>
-              </FadeUp>
-            </div>
-
-          </div>
         </div>
       </section>
 

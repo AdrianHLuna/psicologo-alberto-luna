@@ -50,7 +50,7 @@ const doctor = {
     subspecialty: "Terapia Cognitivo-Conductual, Eneagrama y Sentido de Vida",
     cedula: "15674825",
     phone: "5635862471",
-    whatsapp: "9615798647",
+    whatsapp: "+52 1 961 579 8647",
     email: "psicologobetoluna@gmail.com",
     address: "Avenida Querétaro N. 28, Colonia Residencial Hacienda (entre Taxco y Guanajuato)",
     city: "Tuxtla Gutiérrez",
@@ -229,35 +229,36 @@ __turbopack_context__.s([
     ()=>diseases
 ]);
 const diseases = [
+    // ─── CATEGORY 1: Trastornos del Estado de Ánimo y Afectivos ────────
     {
         id: "depresion",
         slug: "depresion-mayor",
         name: "Depresión Mayor",
         technicalName: "Trastorno Depresivo Mayor",
-        description: "Va mucho más allá de una tristeza pasajera. Se caracteriza por un estado de ánimo deprimido de forma persistente, pérdida de interés o placer en las actividades cotidianas (anedonia), cambios drásticos en el sueño y el apetito, fatiga crónica y sentimientos profundos de inutilidad o culpa. En terapia, se trabaja para reestructurar los pensamientos limitantes y reactivar conductualmente al paciente, guiándole para que recupere la conexión con su vida diaria.",
+        description: "Va mucho más allá de una tristeza pasajera. Las personas que transitan por esto experimentan un estado de ánimo deprimido de forma persistente, pérdida de interés o placer en las actividades cotidianas (anedonia), cambios drásticos en el sueño y el apetito, fatiga crónica y sentimientos profundos de inutilidad o culpa. En terapia, se trabaja para deconstruir pensamientos limitantes y reactivar conductualmente al consultante.",
         symptoms: [
-            "Tristeza o desesperanza la mayor parte del día",
+            "Tristeza profunda o desesperanza la mayor parte del día",
             "Pérdida de interés en pasatiempos y actividades (anedonia)",
-            "Insomnio o exceso de sueño casi todos los días",
+            "Insomnio o hipersomnia casi todos los días",
             "Fatiga extrema o falta de energía persistente",
             "Sentimientos de inutilidad, culpa excesiva o autorreproche",
             "Dificultad para concentrarse o tomar decisiones sencillas"
         ],
         causes: [
-            "Desequilibrios neuroquímicos y predisposición biológica",
-            "Historial de eventos estresantes o pérdidas significativas",
+            "Desequilibrios en los neurotransmisores cerebrales",
+            "Eventos estresantes acumulados o pérdidas significativas",
             "Patrones de pensamiento disfuncionales o autoexigencia destructiva"
         ],
         riskFactors: [
             "Antecedentes familiares de trastornos del estado de ánimo",
-            "Experiencias de trauma o abuso en la infancia",
-            "Enfermedades crónicas o periodos prolongados de aislamiento social"
+            "Experiencias de trauma o abuso en etapas de desarrollo",
+            "Enfermedades crónicas o aislamiento social prolongado"
         ],
-        mexicoStats: "La depresión es la primera causa de discapacidad laboral a nivel de salud mental en México. Cerca del 15% de la población experimenta algún episodio depresivo a lo largo de su vida.",
+        mexicoStats: "La depresión es una de las primeras causas de discapacidad laboral a nivel de salud mental en México, afectando al 15% de la población en algún momento de su vida.",
         complications: [
-            "Aislamiento social extremo y deterioro de relaciones afectivas",
+            "Aislamiento social y deterioro de relaciones significativas",
             "Bajo rendimiento laboral o académico severo",
-            "Descuido de la salud física y alimentación",
+            "Descuido de la salud física y la alimentación",
             "Aparición de ideaciones de autolesión o desesperanza total"
         ],
         treatments: [
@@ -282,7 +283,7 @@ const diseases = [
         ],
         sources: [
             "Manual Diagnóstico y Estadístico de los Trastornos Mentales (DSM-5)",
-            "Organización Mundial de la Salud (OMS) - Depresión",
+            "Organización Mundial de la Salud (OMS)",
             "Asociación Psiquiátrica Mexicana"
         ],
         relatedServices: [
@@ -306,11 +307,162 @@ const diseases = [
         }
     },
     {
+        id: "distimia",
+        slug: "distimia",
+        name: "Distimia (Trastorno Depresivo Persistente)",
+        technicalName: "Trastorno Depresivo Persistente",
+        description: "Es una forma de depresión crónica pero de menor intensidad aparente. Quienes viven con distimia experimentan un estado de ánimo melancólico o desanimado la mayor parte del día, durante al menos dos años. Al ser tan prolongado, muchas personas lo normalizan diciendo 'es que yo siempre he sido así', por lo que la intervención psicológica es clave para devolver la calidad de vida.",
+        symptoms: [
+            "Estado de ánimo triste o melancólico la mayor parte del día",
+            "Baja autoestima e inseguridad persistente",
+            "Sentimientos de desesperanza crónicos",
+            "Poco apetito o comer en exceso",
+            "Falta de energía o fatiga constante",
+            "Dificultad para concentrarse o tomar decisiones"
+        ],
+        causes: [
+            "Factores biológicos y diferencias en la química cerebral",
+            "Patrones de personalidad con tendencia a la rumiación",
+            "Estrés ambiental crónico o situaciones de vida no resueltas"
+        ],
+        riskFactors: [
+            "Tener un familiar de primer grado con trastorno depresivo",
+            "Acontecimientos estresantes de vida prolongados",
+            "Rasgos de personalidad con alta susceptibilidad al estrés"
+        ],
+        mexicoStats: "La distimia es uno de los trastornos del estado de ánimo más subdiagnosticados en México debido a su naturaleza silenciosa y de inicio lento.",
+        complications: [
+            "Deterioro crónico en las relaciones familiares y de pareja",
+            "Pérdida de oportunidades de crecimiento laboral por baja autovaloración",
+            "Desarrollo secundario de episodios de depresión mayor (depresión doble)",
+            "Uso de sustancias como mecanismo de automedicación"
+        ],
+        treatments: [
+            "Psicoterapia Cognitivo-Conductual de largo plazo enfocada en metas",
+            "Terapia cognitivo-conductual para deconstruir creencias rígidas",
+            "Ejercicios de autoafirmación y reconstrucción de la autoestima",
+            "Coordinación médica si la cronicidad del cuadro lo requiere"
+        ],
+        faqs: [
+            {
+                question: "¿Cómo saber si tengo distimia o solo soy de personalidad melancólica?",
+                answer: "La melancolía es un rasgo; la distimia es un trastorno que genera fatiga, problemas de sueño y una persistente falta de disfrute o proyección al futuro. Si el estado de desánimo dura más de 2 años, se requiere una valoración clínica."
+            },
+            {
+                question: "¿Se puede curar la distimia por completo?",
+                answer: "Sí, mediante un proceso terapéutico sostenido. El consultante aprende a desvincularse de la etiqueta de 'persona triste' y a desarrollar hábitos, límites y esquemas mentales más adaptativos y alegres."
+            },
+            {
+                question: "¿Cuál es la diferencia entre distimia y depresión mayor?",
+                answer: "La depresión mayor se presenta por episodios agudos y severos donde la persona puede quedar inhabilitada. La distimia es un estado de ánimo deprimido crónico pero menos paralizante en apariencia."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastornos Depresivos",
+            "Asociación Americana de Psicología (APA)"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "acompanamiento-crisis-existenciales"
+        ],
+        relatedSymptoms: [
+            "inestabilidad-emocional",
+            "baja-autoestima-e-inseguridad"
+        ],
+        image: "/images/dysthymia.jpg",
+        seo: {
+            title: "Tratamiento de Distimia en Tuxtla | Psic. Alberto Luna",
+            description: "Supera la tristeza crónica y el desánimo constante con psicoterapia para la distimia en Tuxtla Gutiérrez. Recupera tu bienestar.",
+            keywords: [
+                "Tratamiento distimia Tuxtla",
+                "Trastorno depresivo persistente",
+                "Psicoterapia de apoyo",
+                "Beto Luna psicólogo"
+            ]
+        }
+    },
+    {
+        id: "trastorno-bipolar",
+        slug: "trastorno-bipolar",
+        name: "Trastorno Bipolar",
+        technicalName: "Trastorno Bipolar I y II",
+        description: "Se caracteriza por fluctuaciones extremas en el estado de ánimo, la energía y los niveles de actividad. Las personas que transitan por esto pasan por episodios de manía o hipomanía (fases de euforia, grandiosidad, hiperactividad y poca necesidad de dormir) y episodios de depresión severa. El acompañamiento psicoterapéutico ayuda a identificar disparadores y mantener la estabilidad en conjunto con el tratamiento psiquiátrico.",
+        symptoms: [
+            "Episodios maníacos con energía desbordada y euforia exagerada",
+            "Disminución drástica de la necesidad de dormir sin sentir cansancio",
+            "Episodios depresivos con desesperanza profunda y fatiga extrema",
+            "Pensamientos acelerados y verborrea (hablar muy rápido)",
+            "Impulsividad y conductas de riesgo durante las fases de manía",
+            "Cambios drásticos en los niveles de productividad y socialización"
+        ],
+        causes: [
+            "Fuerte predisposición genética y heredabilidad biológica",
+            "Diferencias neuroanatómicas en los sistemas de regulación emocional",
+            "Alteraciones en los ritmos circadianos y del reloj biológico interno"
+        ],
+        riskFactors: [
+            "Tener familiares cercanos con diagnóstico de trastorno bipolar",
+            "Periodos de estrés extremo o eventos traumáticos intensos",
+            "Abuso de sustancias estimulantes que desestabilicen el sistema nervioso"
+        ],
+        mexicoStats: "En México, el trastorno bipolar afecta a cerca del 1 al 2% de la población, requiriendo típicamente de 4 a 6 años de promedio para un diagnóstico correcto.",
+        complications: [
+            "Problemas económicos graves debido a compras impulsivas en fases maníacas",
+            "Ruptura de relaciones interpersonales y familiares debido a la inestabilidad",
+            "Dificultad para mantener una trayectoria laboral o profesional estable",
+            "Riesgo elevado de autolesiones durante los episodios depresivos profundos"
+        ],
+        treatments: [
+            "Psicoterapia enfocada en la psicoeducación del trastorno y detección de crisis",
+            "Entrenamiento en regulación de hábitos, horarios de sueño y rutinas diarias",
+            "Terapia cognitivo-conductual para modular pensamientos de grandiosidad y desesperanza",
+            "Coordinación estrecha y obligatoria con psiquiatría para farmacoterapia"
+        ],
+        faqs: [
+            {
+                question: "¿El trastorno bipolar se cura?",
+                answer: "No tiene una cura definitiva, pero es altamente controlable. Con un tratamiento interdisciplinario (psicoterapia + psiquiatría), la gran mayoría de las personas logran una estabilidad completa y una excelente calidad de vida."
+            },
+            {
+                question: "¿Cuál es la diferencia entre bipolaridad y cambios normales de humor?",
+                answer: "Los cambios normales de humor duran horas y no afectan gravemente tu vida. Los episodios del trastorno bipolar duran semanas o meses, son de intensidad clínica extrema y alteran tu juicio, sueño y funcionalidad."
+            },
+            {
+                question: "¿Por qué es tan importante la psicoterapia si ya tomo medicamentos?",
+                answer: "La psicoterapia te dota de herramientas para identificar las primeras señales de alerta de un episodio maníaco o depresivo, manejar el estrés que desestabiliza tus ritmos y te ayuda a adaptarte social y laboralmente."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastorno Bipolar",
+            "National Alliance on Mental Illness (NAMI)"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "entrenamiento-regulacion-emocional"
+        ],
+        relatedSymptoms: [
+            "inestabilidad-emocional",
+            "insomnio-y-ansiedad"
+        ],
+        image: "/images/bipolar.jpg",
+        seo: {
+            title: "Acompañamiento en Trastorno Bipolar | Psic. Alberto Luna",
+            description: "Acompañamiento psicoterapéutico especializado en el Trastorno Bipolar en Tuxtla. Identifica disparadores y recupera tu estabilidad emocional.",
+            keywords: [
+                "Trastorno bipolar Tuxtla",
+                "Psicoterapia trastorno bipolar Chiapas",
+                "Regulación del humor",
+                "Beto Luna psicólogo"
+            ]
+        }
+    },
+    // ─── CATEGORY 2: Trastornos de Ansiedad ───────────────────────────
+    {
         id: "ansiedad",
         slug: "ansiedad-generalizada",
         name: "Ansiedad Generalizada",
         technicalName: "Trastorno de Ansiedad Generalizada (TAG)",
-        description: "Implica una preocupación excesiva, persistente y difícil de controlar sobre diversas situaciones cotidianas (trabajo, salud, familia), incluso cuando no hay un peligro real o inminente. Se acompaña de síntomas físicos como tensión muscular, irritabilidad, problemas de sueño y una constante sensación de estar 'al límite'. La intervención psicológica dota al consultante de herramientas para regular su sistema nervioso y reinterpretar los estímulos de amenaza.",
+        description: "Implica una preocupación excesiva, persistente y difícil de controlar sobre diversas situaciones cotidianas (trabajo, salud, familia), incluso cuando no hay un peligro real o inminente. Las personas que transitan por esto se acompañan de síntomas físicos como tensión muscular, irritabilidad, problemas de sueño y una constante sensación de estar 'al límite'. La intervención psicológica dota al consultante de herramientas para regular su sistema nervioso.",
         symptoms: [
             "Preocupación constante y desproporcionada por eventos cotidianos",
             "Dificultad marcada para controlar el flujo de preocupaciones",
@@ -382,11 +534,237 @@ const diseases = [
         }
     },
     {
+        id: "panico",
+        slug: "trastorno-de-panico",
+        name: "Trastorno de Pánico (Ataques de Pánico)",
+        technicalName: "Trastorno de Pánico",
+        description: "Se manifiesta a través de crisis de angustia inesperadas y reincidentes. Quienes experimentan esto viven oleadas repentinas de miedo intenso que alcanzan su punto máximo en minutos, acompañadas de taquicardia, dificultad para respirar, mareos y un miedo paralizante a morir o perder el control. La terapia ayuda a perder el miedo a los síntomas físicos y a regular el sistema nervioso.",
+        symptoms: [
+            "Palpitaciones aceleradas o taquicardia repentina",
+            "Sensación de ahogo, asfixia o dificultad para respirar",
+            "Temblores, sudoración fría y escalofríos",
+            "Opresión o dolor en el pecho que simula un problema cardíaco",
+            "Mareos, inestabilidad o sensación de desmayo inminente",
+            "Miedo intenso a morir, volverse loco o perder el control"
+        ],
+        causes: [
+            "Hipersensibilidad biológica a las variaciones del dióxido de carbono y respiración",
+            "Condicionamiento clásico del cuerpo: asociar una taquicardia menor con peligro de muerte",
+            "Altos niveles de estrés acumulados que desbordan el umbral de alarma"
+        ],
+        riskFactors: [
+            "Haber vivido un evento estresante agudo o traumático previo",
+            "Consumo excesivo de estimulantes como cafeína o tabaco",
+            "Rasgos de personalidad con tendencia a la hipervigilancia corporal"
+        ],
+        mexicoStats: "Los ataques de pánico representan uno de los motivos de urgencias médicas más comunes que terminan siendo canalizados a psicoterapia en los hospitales de México.",
+        complications: [
+            "Desarrollo de agorafobia: miedo a salir de casa o estar en lugares donde sea difícil escapar",
+            "Ansiedad anticipatoria constante ('miedo al miedo' o miedo a volver a tener un ataque)",
+            "Abuso de sedantes o sustancias para evitar la ansiedad física",
+            "Deterioro de la libertad de movimiento y autonomía del paciente"
+        ],
+        treatments: [
+            "Psicoterapia Cognitivo-Conductual enfocada en la Terapia de Exposición Interoceptiva",
+            "Ejercicios prácticos para provocar y tolerar voluntariamente sensaciones corporales",
+            "Técnicas de reentrenamiento respiratorio (respiración diafragmática)",
+            "Deconstrucción de pensamientos catastróficos asociados a los ataques de pánico"
+        ],
+        faqs: [
+            {
+                question: "¿Me puedo morir o volver loco durante un ataque de pánico?",
+                answer: "No. Aunque la sensación física es aterradora, el ataque de pánico es una activación de emergencia natural del cuerpo (adrenalina) que no causa daño físico, infartos ni locura, y remite por sí solo en unos minutos."
+            },
+            {
+                question: "¿Qué debo hacer cuando empieza un ataque de pánico?",
+                answer: "En lugar de luchar contra él o hiperventilar, intenta sentarte, respirar de forma lenta y pausada con el abdomen, y recordarte a ti mismo de forma compasiva que es un estado temporal que pasará pronto."
+            },
+            {
+                question: "¿Cómo ayuda la exposición en la terapia para el pánico?",
+                answer: "Te enseña a exponerte en un ambiente seguro a las sensaciones que te asustan (como acelerar tu ritmo cardíaco haciendo ejercicio leve) para que tu cerebro aprenda que no son peligrosas."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastorno de Pánico",
+            "National Institute of Mental Health (NIMH)"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "entrenamiento-regulacion-emocional"
+        ],
+        relatedSymptoms: [
+            "insomnio-y-ansiedad",
+            "inestabilidad-emocional"
+        ],
+        image: "/images/panic-attacks.jpg",
+        seo: {
+            title: "Tratamiento de Ataques de Pánico en Tuxtla | Psic. Alberto Luna",
+            description: "Supera el miedo al miedo y controla los ataques de pánico mediante terapia cognitivo-conductual en Tuxtla Gutiérrez. Técnicas de regulación física.",
+            keywords: [
+                "Ataques de pánico Tuxtla",
+                "Crisis de ansiedad terapia Chiapas",
+                "Exposición interoceptiva",
+                "Beto Luna psicólogo"
+            ]
+        }
+    },
+    {
+        id: "fobia-social",
+        slug: "fobia-social",
+        name: "Fobia Social (Trastorno de Ansiedad Social)",
+        technicalName: "Trastorno de Ansiedad Social",
+        description: "Es un miedo intenso y persistente a ser juzgado, criticado o humillado por otros en situaciones sociales o al tener que hablar en público. Quienes transitan por este trastorno experimentan una evitación activa de interacciones que puede aislar significativamente a la persona en su vida laboral y personal, y va mucho más allá de la timidez común.",
+        symptoms: [
+            "Temor severo a hablar, comer o realizar actividades frente a otros",
+            "Ansiedad anticipatoria intensa días o semanas antes de un evento social",
+            "Síntomas físicos como sonrojarse, sudar frío, temblar o quedarse en blanco",
+            "Evitación sistemática de reuniones, juntas de trabajo o eventos sociales",
+            "Autoevaluación hipercrítica y rumiación después de interactuar",
+            "Sensación extrema de incomodidad y de ser el centro de críticas negativas"
+        ],
+        causes: [
+            "Experiencias de humillación, acoso o bullying en la infancia o adolescencia",
+            "Modelos de comportamiento familiar de excesiva timidez o miedo al entorno",
+            "Sesgo de atención: enfocar la mente únicamente en las señales de desaprobación ajenas"
+        ],
+        riskFactors: [
+            "Antecedentes de experiencias sociales negativas o traumáticas",
+            "Temperamento inhibido o temeroso desde la niñez",
+            "Nuevas demandas sociales o laborales que requieran exposición pública"
+        ],
+        mexicoStats: "La fobia social se inicia comúnmente en la adolescencia media y afecta el rendimiento universitario y la empleabilidad de miles de jóvenes mexicanos en la actualidad.",
+        complications: [
+            "Aislamiento social extremo y dificultad severa para entablar amistades o pareja",
+            "Subempleo o deserción académica debido a la evitación de exposiciones",
+            "Baja autoestima cronificada y sentimientos de inferioridad",
+            "Mayor vulnerabilidad a desarrollar trastornos depresivos de forma secundaria"
+        ],
+        treatments: [
+            "Terapia Cognitivo-Conductual enfocada en el Cuestionamiento de Pensamientos Negativos",
+            "Entrenamiento en Habilidades Sociales y asertividad práctica",
+            "Terapia de Exposición Gradual a situaciones sociales temidas",
+            "Mindfulness aplicado para disminuir la autoconciencia excesiva"
+        ],
+        faqs: [
+            {
+                question: "¿Cuál es la diferencia entre timidez y fobia social?",
+                answer: "La timidez es un rasgo de personalidad que te hace ser reservado pero no te detiene. La fobia social es un trastorno clínico que te genera un sufrimiento intenso y te obliga a evitar situaciones cotidianas, limitando tu desarrollo laboral o académico."
+            },
+            {
+                question: "¿Cómo ayuda la exposición en la fobia social?",
+                answer: "En terapia diseñamos una 'jerarquía' de situaciones incómodas de menor a mayor dificultad (ej. saludar a un desconocido, luego preguntar una dirección, etc.) y nos exponemos gradualmente para reprogramar la respuesta de miedo."
+            },
+            {
+                question: "¿Se puede superar el miedo a hablar en público?",
+                answer: "Sí, es completamente viable. A través de técnicas de regulación de la ansiedad y la práctica estructurada de habilidades de oratoria y asertividad, el hablar en público se vuelve una habilidad manejable."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastorno de Ansiedad Social",
+            "Social Anxiety Association"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "talleres-psicoeducativos"
+        ],
+        relatedSymptoms: [
+            "autoexigencia-destructiva",
+            "baja-autoestima-e-inseguridad"
+        ],
+        image: "/images/social-phobia.jpg",
+        seo: {
+            title: "Tratamiento de Fobia Social en Tuxtla | Psic. Alberto Luna",
+            description: "Supera el miedo al rechazo, al juicio y a hablar en público mediante psicoterapia cognitiva en Tuxtla Gutiérrez. Recupera tu confianza social.",
+            keywords: [
+                "Fobia social Tuxtla",
+                "Ansiedad social tratamiento Chiapas",
+                "Habilidades sociales psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
+    {
+        id: "ansiedad-separacion",
+        slug: "ansiedad-por-separacion",
+        name: "Ansiedad por Separación",
+        technicalName: "Trastorno de Ansiedad por Separación en Adultos",
+        description: "Es un miedo o ansiedad excesiva ante la idea de alejarse de las figuras de apego principales (pareja, padres, hijos). Aunque comúnmente se asocia con los niños, las personas adultas que transitan por este trastorno experimentan una preocupación constante de que algo malo les pase a sus seres queridos y una resistencia marcada a estar solas o lejos de ellas.",
+        symptoms: [
+            "Preocupación persistente e irracional de perder a las figuras de apego",
+            "Miedo obsesivo a que ocurra un accidente o desgracia a los seres queridos",
+            "Resistencia o negativa a salir o trabajar lejos del hogar por temor a la separación",
+            "Necesidad constante de mantener contacto o verificar la ubicación del ser querido",
+            "Pesadillas recurrentes sobre el tema de la separación o pérdidas",
+            "Malestar físico (dolores de cabeza, náuseas) ante la idea del distanciamiento"
+        ],
+        causes: [
+            "Historial de pérdidas o muertes repentinas de seres queridos en el pasado",
+            "Estilos de apego ansioso o dependiente desarrollados en el núcleo familiar",
+            "Cambios estresantes severos en el entorno afectivo inmediato"
+        ],
+        riskFactors: [
+            "Haber vivido el divorcio conflictivo de los padres o abandono en la niñez",
+            "Personalidad con alta dependencia emocional y baja tolerancia a la soledad",
+            "Pérdidas afectivas recientes o transiciones familiares bruscas"
+        ],
+        mexicoStats: "En la consulta psicológica en México, se observa frecuentemente en adultos jóvenes en relaciones de pareja simbióticas o dependientes, afectando su autonomía personal.",
+        complications: [
+            "Desarrollo de celotipia o conductas de control excesivo sobre la pareja",
+            "Aislamiento laboral por no aceptar ofertas de trabajo fuera de la localidad",
+            "Altos niveles de estrés familiar debido al agobio del ser querido",
+            "Vulnerabilidad a tolerar abusos o relaciones poco saludables por miedo a la soledad"
+        ],
+        treatments: [
+            "Psicoterapia enfocada en el fortalecimiento de la autonomía y el autoconcepto",
+            "Reestructuración cognitiva de los miedos catastróficos asociados a la pérdida",
+            "Terapia de apego y límites saludables en las relaciones afectivas",
+            "Ejercicios de exposición gradual al distanciamiento y la soledad programada"
+        ],
+        faqs: [
+            {
+                question: "¿Es normal sentir miedo a que algo malo le pase a mi familia?",
+                answer: "Es normal preocuparse por la seguridad de tus seres queridos. Se vuelve un trastorno por separación cuando la ansiedad es desproporcionada, consume horas de tu día, te impide salir a trabajar o te causa síntomas físicos severos."
+            },
+            {
+                question: "¿Cómo ayuda la terapia a mejorar mi independencia?",
+                answer: "Te ayuda a identificar tus patrones de apego, a gestionar los pensamientos catastróficos que detonan tus llamadas constantes y a construir una vida autónoma con pasatiempos y metas personales."
+            },
+            {
+                question: "¿Este trastorno afecta mis relaciones de pareja?",
+                answer: "Sí, suele generar dinámicas asfixiantes o de excesiva demanda de atención que cansan a la pareja. Trabajar la ansiedad por separación es la mejor manera de cimentar un amor libre y saludable."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastorno de Ansiedad por Separación",
+            "Attachment Theory Research Center"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "acompanamiento-crisis-existenciales"
+        ],
+        relatedSymptoms: [
+            "inestabilidad-emocional",
+            "baja-autoestima-e-inseguridad"
+        ],
+        image: "/images/separation-anxiety.jpg",
+        seo: {
+            title: "Ansiedad por Separación en Adultos | Psic. Alberto Luna",
+            description: "Supera la dependencia emocional y el miedo obsesivo a perder a tus seres queridos con psicoterapia especializada en Tuxtla Gutiérrez.",
+            keywords: [
+                "Ansiedad por separación adultos",
+                "Dependencia emocional terapia Tuxtla",
+                "Límites saludables pareja",
+                "Beto Luna psicólogo"
+            ]
+        }
+    },
+    // ─── CATEGORY 3: Trastornos Asociados al Estrés y Trauma ──────────
+    {
         id: "estres",
         slug: "estres-postraumatico",
         name: "Estrés Postraumático (TEPT)",
         technicalName: "Trastorno de Estrés Postraumático",
-        description: "Se desarrolla después de haber vivido o presenciado un evento altamente amenazante, doloroso o traumático (accidentes graves, violencia, pérdidas repentinas, asaltos). El consultante revive el suceso a través de recuerdos intrusivos involuntarios (flashbacks), pesadillas y un estado de alerta constante (hipervigilancia), lo que lo lleva a evitar activamente cualquier estímulo, lugar o conversación asociado al trauma.",
+        description: "Se desarrolla después de haber vivido o presenciado un evento altamente amenazante, doloroso o traumático (accidentes graves, violencia, pérdidas repentinas, asaltos). Las personas que transitan por esto reviven el suceso a través de recuerdos intrusivos involuntarios (flashbacks), pesadillas y un estado de alerta constante (hipervigilancia), lo que los lleva a evitar activamente cualquier estímulo, lugar o conversación asociado al trauma.",
         symptoms: [
             "Recuerdos angustiosos e intrusivos recurrentes del evento traumático",
             "Sueños o pesadillas vívidas sobre lo ocurrido",
@@ -457,6 +835,82 @@ const diseases = [
             ]
         }
     },
+    {
+        id: "adaptacion",
+        slug: "trastorno-de-adaptacion",
+        name: "Trastorno de Adaptación",
+        technicalName: "Trastornos de Adaptación",
+        description: "Ocurre cuando una persona experimenta una respuesta emocional o conductual desproporcionada ante un cambio, pérdida o estresor vital identificable (un divorcio, un despido, una mudanza, contraer una enfermedad o una crisis de transición de vida). A diferencia de otros cuadros crónicos, los síntomas suelen remitir una vez que el consultante desarrolla herramientas de afrontamiento en terapia para adaptarse a su nueva realidad.",
+        symptoms: [
+            "Tristeza, ganas de llorar con frecuencia o desesperanza",
+            "Preocupación y ansiedad constantes por la situación de cambio",
+            "Dificultades para dormir y falta de apetito",
+            "Sentimiento de incapacidad para lidiar con el nuevo escenario de vida",
+            "Aislamiento social temporal de amigos y familiares",
+            "Deterioro en el desempeño laboral o escolar debido al agobio"
+        ],
+        causes: [
+            "Presencia de un estresor identificable que altera la rutina de vida",
+            "Falta de estrategias adaptativas o recursos emocionales para el cambio",
+            "Significado catastrófico asignado a la nueva situación de vida"
+        ],
+        riskFactors: [
+            "Acumulación de múltiples cambios o estresores al mismo tiempo",
+            "Falta de una red de apoyo social o familiar sólida",
+            "Experiencias previas de mala adaptación ante crisis anteriores"
+        ],
+        mexicoStats: "Es uno de los diagnósticos más frecuentes en la psicoterapia de consulta privada en México, especialmente en adultos que inician la vida independiente o cambian de empleo.",
+        complications: [
+            "Evolución hacia un cuadro de trastorno depresivo mayor si no se trata a tiempo",
+            "Desarrollo de ansiedad cronificada ante futuros cambios de vida",
+            "Dificultades en la toma de decisiones que complican más la situación de cambio",
+            "Uso de la evitación o la procrastinación para no hacer frente al problema"
+        ],
+        treatments: [
+            "Psicoterapia Cognitivo-Conductual enfocada en la resolución de problemas",
+            "Técnicas cognitivas para flexibilizar esquemas de rigidez ante el cambio",
+            "Acompañamiento y soporte emocional para validar el proceso de transición",
+            "Diseño de un plan de acción concreto paso a paso para el nuevo escenario"
+        ],
+        faqs: [
+            {
+                question: "¿Cuánto tiempo duran los síntomas del trastorno de adaptación?",
+                answer: "Los síntomas comienzan en los 3 meses posteriores a la aparición del estresor y, por lo general, no duran más de 6 meses una vez que el estresor ha cesado o el consultante ha aprendido a adaptarse en terapia."
+            },
+            {
+                question: "¿Cuál es la diferencia con una depresión común?",
+                answer: "El trastorno de adaptación está directamente vinculado a un cambio o estresor de vida identificable. Los síntomas son una respuesta a ese evento y disminuyen significativamente al asimilar el cambio."
+            },
+            {
+                question: "¿Cómo me ayuda la psicoterapia en este proceso?",
+                answer: "Te dota de herramientas de resolución de problemas, te ayuda a deconstruir la resistencia al cambio, a manejar la ansiedad de la incertidumbre y a diseñar hábitos que te ayuden a asimilar tu nueva realidad."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastornos Relacionados con Traumas y Factores de Estrés",
+            "Cleveland Clinic - Adjustment Disorders"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "acompanamiento-crisis-existenciales"
+        ],
+        relatedSymptoms: [
+            "crisis-cuarto-vida",
+            "duelo-y-perdidas"
+        ],
+        image: "/images/adjustment-disorder.jpg",
+        seo: {
+            title: "Terapia para Trastornos de Adaptación | Beto Luna",
+            description: "Supera el agobio por cambios drásticos de vida (divorcio, mudanza, despido) mediante terapia en Tuxtla Gutiérrez. Aprende a adaptarte.",
+            keywords: [
+                "Trastorno de adaptación Tuxtla",
+                "Terapia para el cambio de vida Chiapas",
+                "Afrontamiento de crisis",
+                "Psicólogo Alberto Luna"
+            ]
+        }
+    },
+    // ─── CATEGORY 4: Trastornos del Comportamiento y Personalidad ──────
     {
         id: "toc",
         slug: "trastorno-obsesivo-compulsivo",
@@ -534,6 +988,157 @@ const diseases = [
         }
     },
     {
+        id: "tlp",
+        slug: "trastorno-personalidad-limite",
+        name: "Trastorno de la Personalidad Límite (TLP)",
+        technicalName: "Trastorno de la Personalidad Límite",
+        description: "Se caracteriza por un patrón generalizado de inestabilidad en las relaciones interpersonales, la autoimagen y los afectos, además de una marcada impulsividad. Las personas que transitan por esto suelen experimentar un miedo crónico al abandono, sentimientos de vacío existencial y dificultades para regular la ira, encontrando en el espacio terapéutico un contenedor seguro para aprender a validar y gestionar sus emociones.",
+        symptoms: [
+            "Esfuerzos frenéticos para evitar un abandono real o imaginado",
+            "Patrón de relaciones interpersonales inestables e intensas (pasar del amor al odio)",
+            "Alteración de la identidad con autoimagen marcadamente inestable",
+            "Impulsividad dañina en áreas como gastos, alimentación o conducción",
+            "Intentos o amenazas de autolesión o conductas autodestructivas",
+            "Inestabilidad afectiva debida a una notable reactividad del estado de ánimo"
+        ],
+        causes: [
+            "Hiperactividad del sistema límbico combinada con baja regulación prefrontal",
+            "Ambientes de crianza invalidantes donde se minimizan o castigan las emociones",
+            "Antecedentes de trauma, negligencia o abuso en etapas de desarrollo"
+        ],
+        riskFactors: [
+            "Predisposición genética a la impulsividad y labilidad emocional",
+            "Ambientes familiares inestables o de alta conflictividad en la infancia",
+            "Pérdidas afectivas severas en la niñez temprana"
+        ],
+        mexicoStats: "El TLP representa uno de los diagnósticos de personalidad más atendidos en la consulta clínica de salud mental privada en México, requiriendo un abordaje estructurado y centrado en la validación.",
+        complications: [
+            "Rupturas continuas de relaciones de amistad, de pareja y familiares",
+            "Dificultad severa para consolidar proyectos profesionales o de trabajo",
+            "Riesgo de incurrir en adicciones como mecanismo de escape al dolor",
+            "Episodios de crisis que requieran atención en urgencias médicas"
+        ],
+        treatments: [
+            "Psicoterapia Cognitivo-Conductual y principios de Terapia Dialéctico Conductual (DBT)",
+            "Entrenamiento en habilidades de tolerancia al malestar y efectividad interpersonal",
+            "Técnicas de regulación emocional y de desactivación simpática ante picos de ira",
+            "Canalización y supervisión médica constante para el control de la impulsividad"
+        ],
+        faqs: [
+            {
+                question: "¿El TLP se puede tratar con psicoterapia?",
+                answer: "Sí, es el tratamiento principal y más efectivo. La terapia enseña al consultante a regular sus emociones intensas, a tolerar el malestar sin recurrir al autosabotaje y a establecer relaciones estables."
+            },
+            {
+                question: "¿Qué es un 'ambiente invalidante' y cómo influye?",
+                answer: "Es un entorno donde al crecer se le dice al niño que lo que siente es exagerado, tonto o mentira. Esto impide que la persona aprenda a confiar en sus emociones y a regularlas por sí misma de adulto."
+            },
+            {
+                question: "¿Cómo ayuda la terapia Dialéctica Conductual (DBT)?",
+                answer: "Es el modelo estándar que ayuda a balancear la aceptación de las emociones dolorosas con el cambio de conductas impulsivas, brindando herramientas prácticas de mindfulness y asertividad."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastornos de la Personalidad",
+            "National Education Alliance for Borderline Personality Disorder"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "entrenamiento-regulacion-emocional"
+        ],
+        relatedSymptoms: [
+            "inestabilidad-emocional",
+            "baja-autoestima-e-inseguridad"
+        ],
+        image: "/images/borderline.jpg",
+        seo: {
+            title: "Terapia para Trastorno Límite (TLP) en Tuxtla | Beto Luna",
+            description: "Espacio psicoterapéutico seguro para la regulación emocional y el tratamiento del TLP en Tuxtla Gutiérrez. Aprende a manejar la impulsividad.",
+            keywords: [
+                "Terapia TLP Tuxtla",
+                "Trastorno de personalidad límite Chiapas",
+                "Terapia Dialéctica Conductual",
+                "Psicólogo Alberto Luna"
+            ]
+        }
+    },
+    {
+        id: "personalidad-evitativa",
+        slug: "trastorno-personalidad-evitativa",
+        name: "Trastorno de la Personalidad Ansiosa o Evitativa",
+        technicalName: "Trastorno de la Personalidad Evitativa",
+        description: "Las personas con este perfil se perciben a sí mismas como socialmente ineptas, poco atractivas o inferiores. Tienen un deseo intrínseco de cercanía y conexión con los demás, pero su pavor absoluto al rechazo, a la desaprobación o al ridículo hace que eviten por completo las actividades o trabajos que impliquen contacto interpersonal significativo, limitando su desarrollo social.",
+        symptoms: [
+            "Evitación de actividades laborales que impliquen contacto interpersonal por miedo a la crítica",
+            "Renuencia a implicarse con la gente si no están seguros de que les agradarán",
+            "Preocupación constante por la posibilidad de ser criticados o rechazados",
+            "Inhibición en nuevas situaciones interpersonales debido al sentimiento de inferioridad",
+            "Autopercepción como socialmente ineptos, personalmente poco atractivos o inferiores",
+            "Renuencia a asumir riesgos personales por temor a sonrojarse o quedar en ridículo"
+        ],
+        causes: [
+            "Rechazo parental o críticas severas constantes durante la niñez temprana",
+            "Temperamento hipersensible innato a la estimulación social y al castigo",
+            "Creencias nucleares disfuncionales sobre la propia valía ('soy defectuoso y me rechazarán')"
+        ],
+        riskFactors: [
+            "Experiencias infantiles de humillación o marginación social",
+            "Padres con perfiles altamente evitativos o de ansiedad social",
+            "Rasgos de introversión extrema en la infancia no acompañados de guía asertiva"
+        ],
+        mexicoStats: "Este trastorno de personalidad suele ser confundido en México con 'timidez extrema', retrasando la consulta hasta que se generan crisis de ansiedad o depresión por aislamiento.",
+        complications: [
+            "Aislamiento social casi total, limitando las oportunidades de tener pareja o amigos",
+            "Subempleo grave debido a evitar puestos de liderazgo o trabajo en equipo",
+            "Desarrollo crónico de trastornos de ansiedad y depresión mayor",
+            "Falta de una red de apoyo social en momentos de crisis o transiciones"
+        ],
+        treatments: [
+            "Psicoterapia cognitiva para reestructurar las creencias de inferioridad y rechazo",
+            "Exposición gradual in-vivo e imaginada a interacciones sociales comunes",
+            "Entrenamiento en habilidades de conversación y asertividad social",
+            "Ejercicios de autoafirmación y reconstrucción de la autoestima corporal y personal"
+        ],
+        faqs: [
+            {
+                question: "¿Cuál es la diferencia con la fobia social común?",
+                answer: "La fobia social se centra en la ansiedad ante situaciones públicas de desempeño. El trastorno evitativo es un patrón de personalidad más profundo y global que afecta toda la autopercepción e identidad del consultante."
+            },
+            {
+                question: "¿Cómo ayuda la terapia a cambiar la creencia de ser inferior?",
+                answer: "Te ayuda a identificar la voz autocrítica, evaluar con base en evidencias reales si eres 'inepto' y exponerte gradualmente a interacciones para comprobar que el rechazo no es inevitable ni catastrófico."
+            },
+            {
+                question: "¿Se puede llegar a tener una vida social normal con este trastorno?",
+                answer: "Sí, es completamente posible. El proceso terapéutico reduce el miedo a niveles manejables y enseña habilidades para entablar y mantener vínculos significativos con seguridad."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastornos de la Personalidad Grupo C",
+            "International Society for the Study of Personality Disorders"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "talleres-psicoeducativos"
+        ],
+        relatedSymptoms: [
+            "baja-autoestima-e-inseguridad",
+            "autoexigencia-destructiva"
+        ],
+        image: "/images/avoidant-personality.jpg",
+        seo: {
+            title: "Terapia para Personalidad Evitativa | Psic. Alberto Luna",
+            description: "Supera el miedo crónico al rechazo, al ridículo y a la desaprobación social. Psicoterapia adaptada en Tuxtla Gutiérrez.",
+            keywords: [
+                "Trastorno de personalidad evitativa Tuxtla",
+                "Miedo al rechazo terapia Chiapas",
+                "Aislamiento social psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
+    // ─── CATEGORY 5: Trastornos del Desarrollo y Conducta Alimentaria ──
+    {
         id: "tdah",
         slug: "tdah-en-adultos",
         name: "TDAH en Adultos",
@@ -606,6 +1211,156 @@ const diseases = [
                 "Psicólogo procrastinación Chiapas",
                 "Entrenamiento funciones ejecutivas",
                 "Beto Luna psicólogo"
+            ]
+        }
+    },
+    {
+        id: "atracon",
+        slug: "trastorno-por-atracon",
+        name: "Trastorno por Atracón",
+        technicalName: "Trastorno por Atracón (TCA)",
+        description: "Es uno de los trastornos de la conducta alimentaria (TCA) más atendidos en la consulta general. A diferencia de la anorexia o la bulimia clásicas, las personas que transitan por este trastorno ingieren cantidades de comida significativamente superiores a lo normal en poco tiempo, acompañadas de una dolorosa sensación de pérdida de control, culpa y malestar emocional, utilizando la comida como un mecanismo fallido de regulación afectiva.",
+        symptoms: [
+            "Episodios recurrentes de atracones de comida en un periodo corto",
+            "Sensación de pérdida de control sobre la ingesta durante el episodio",
+            "Comer mucho más rápido de lo normal o hasta sentirse incómodamente lleno",
+            "Comer grandes cantidades sin sentir hambre física real",
+            "Comer a solas debido a la vergüenza o culpa por la cantidad ingerida",
+            "Ausencia de conductas compensatorias regulares (no hay purgas o vómitos)"
+        ],
+        causes: [
+            "Historial de restricciones o dietas extremas que detonan el bucle de atracón",
+            "Uso de la comida para calmar emociones incómodas (aburrimiento, tristeza, ansiedad)",
+            "Insatisfacción corporal severa e interiorización de estándares de belleza irreales"
+        ],
+        riskFactors: [
+            "Baja autoestima y problemas previos de distorsión de la imagen corporal",
+            "Dinámicas familiares centradas en el control estricto del peso y las calorías",
+            "Dificultades en la regulación emocional y en el control de impulsos"
+        ],
+        mexicoStats: "El trastorno por atracón es la manifestación alimentaria de origen psicológico más recurrente en México, presentándose en adultos y adolescentes de todos los géneros.",
+        complications: [
+            "Desarrollo de problemas de salud asociados como diabetes, hipertensión o fatiga",
+            "Altos sentimientos de culpa, depresión y aislamiento social por vergüenza",
+            "Trastornos del sueño y dolores físicos gastrointestinales crónicos",
+            "Deterioro de la relación con el cuerpo y cronificación de conductas de restricción"
+        ],
+        treatments: [
+            "Psicoterapia cognitiva para romper el ciclo restricción-atracón",
+            "Entrenamiento en alimentación consciente (Mindful Eating) y autorregulación afectiva",
+            "Deconstrucción de pensamientos distorsionados sobre el cuerpo y la valía personal",
+            "Monitoreo conjunto con especialistas en nutrición clínica y medicina general"
+        ],
+        faqs: [
+            {
+                question: "¿El trastorno por atracón es solo falta de fuerza de voluntad?",
+                answer: "No. El atracón es un problema clínico de salud mental relacionado con la desregulación de las emociones y la impulsividad. Culpar a la 'fuerza de voluntad' solo incrementa la culpa y prolonga el ciclo del atracón."
+            },
+            {
+                question: "¿Cómo ayuda la terapia a dejar de comer por ansiedad?",
+                answer: "Te enseña a identificar tus detonantes emocionales, a diferenciar el hambre física del hambre emocional, y a desarrollar otras herramientas saludables para lidiar con el estrés sin recurrir a la comida."
+            },
+            {
+                question: "¿Por qué las dietas estrictas empeoran los atracones?",
+                answer: "Porque la restricción física y mental genera una privación que el cerebro interpreta como peligro. Esto incrementa la urgencia de comer, derivando inevitablemente en un episodio de atracón."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastornos de la Conducta Alimentaria",
+            "National Eating Disorders Association (NEDA)"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "entrenamiento-regulacion-emocional"
+        ],
+        relatedSymptoms: [
+            "inestabilidad-emocional",
+            "baja-autoestima-e-inseguridad"
+        ],
+        image: "/images/binge-eating.jpg",
+        seo: {
+            title: "Tratamiento de Trastorno por Atracón en Tuxtla | Psic. Alberto Luna",
+            description: "Supera el comer por ansiedad, la culpa y el atracón crónico mediante terapia cognitiva y alimentación consciente en Tuxtla Gutiérrez.",
+            keywords: [
+                "Trastorno por atracón Tuxtla",
+                "Comer por ansiedad tratamiento Chiapas",
+                "Alimentación consciente psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
+    {
+        id: "somatomorfo",
+        slug: "trastorno-sintomas-somaticos",
+        name: "Trastorno de Síntomas Somáticos (Somatización)",
+        technicalName: "Trastorno de Síntomas Somáticos",
+        description: "Se presenta cuando una persona experimenta una preocupación angustiante y desproporcionada por síntomas físicos (dolores de cabeza, fatiga, problemas estomacales, mareos), dedicando demasiado tiempo y energía a estos problemas de salud. Aunque el malestar físico es completamente real para quien lo padece, la raíz principal se encuentra en la ansiedad y en la interpretación catastrófica de las sensaciones corporales.",
+        symptoms: [
+            "Preocupación constante y persistente sobre la gravedad de los síntomas físicos",
+            "Altos niveles de ansiedad acerca de la salud personal o corporal",
+            "Gasto excesivo de tiempo y energía en consultas y exámenes médicos",
+            "Interpretación catastrófica de sensaciones normales (creer que un dolor leve es cáncer)",
+            "Persistencia de síntomas físicos reales que no tienen explicación orgánica clara",
+            "Frustración severa ante la falta de diagnósticos médicos tradicionales"
+        ],
+        causes: [
+            "Hipersensibilidad temperamental a las señales y sensaciones del cuerpo",
+            "Historial de familiares con preocupaciones excesivas por enfermedades",
+            "Mecanismo de defensa inconsciente para canalizar el estrés mental al plano físico"
+        ],
+        riskFactors: [
+            "Haber vivido una enfermedad grave o traumática en la infancia",
+            "Altos niveles de estrés laboral, familiar o académico acumulado",
+            "Tendencia de personalidad a la catastrofización y rumiación"
+        ],
+        mexicoStats: "Es un motivo de consulta recurrente en los centros de salud de México, donde los consultantes realizan múltiples estudios médicos antes de ser canalizados a psicología clínica.",
+        complications: [
+            "Altos costos económicos por visitas frecuentes a múltiples médicos y exámenes",
+            "Deterioro de la calidad de vida y desatención de actividades laborales",
+            "Conflictos familiares debido a la incomprensión de que el dolor es de origen psicológico",
+            "Desarrollo secundario de depresión mayor por frustración médica"
+        ],
+        treatments: [
+            "Psicoterapia Cognitivo-Conductual para deconstruir la interpretación de las sensaciones corporales",
+            "Técnicas de relajación muscular progresiva y biofeedback para disminuir la tensión",
+            "Mindfulness aplicado a la aceptación y reducción de la hipervigilancia física",
+            "Coordinación médica para evitar exámenes innecesivos y dar seguimiento estructurado"
+        ],
+        faqs: [
+            {
+                question: "¿Significa esto que me estoy inventando el dolor o los síntomas?",
+                answer: "No. El dolor y los síntomas físicos son completamente reales y los sientes físicamente en el cuerpo. Lo que la terapia aborda es que la causa primaria no es un daño en los órganos, sino la ansiedad que amplifica e interpreta erróneamente las señales corporales."
+            },
+            {
+                question: "¿Cómo ayuda la terapia cognitivo-conductual en la somatización?",
+                answer: "Te ayuda a identificar pensamientos catastróficos, a disminuir la revisión obsesiva de tu cuerpo en busca de síntomas y a aprender técnicas para relajar tu sistema nervioso, reduciendo la intensidad física del dolor."
+            },
+            {
+                question: "¿Por qué me duele el cuerpo cuando estoy estresado?",
+                answer: "El estrés libera hormonas como el cortisol y activa la tensión muscular. Si esta tensión se mantiene por semanas, se traduce en dolores reales de cabeza, colitis, dolores de espalda y fatiga crónica."
+            }
+        ],
+        sources: [
+            "DSM-5 - Trastorno de Síntomas Somáticos",
+            "Mayo Clinic - Somatic Symptom Disorder"
+        ],
+        relatedServices: [
+            "psicoterapia-adultos",
+            "entrenamiento-regulacion-emocional"
+        ],
+        relatedSymptoms: [
+            "insomnio-y-ansiedad",
+            "inestabilidad-emocional"
+        ],
+        image: "/images/somatic-symptom.jpg",
+        seo: {
+            title: "Terapia para Somatización en Tuxtla | Psic. Alberto Luna",
+            description: "Tratamiento de la ansiedad por salud y la somatización del dolor en Tuxtla Gutiérrez. Aprende a calmar tu cuerpo y mente.",
+            keywords: [
+                "Trastorno de síntomas somáticos Tuxtla",
+                "Hipocondría tratamiento Chiapas",
+                "Somatización del estrés",
+                "Beto Luna"
             ]
         }
     }
@@ -906,6 +1661,7 @@ __turbopack_context__.s([
     ()=>symptoms
 ]);
 const symptoms = [
+    // ─── CATEGORY 1: Crisis de Identidad y Transiciones de Vida ────────
     {
         id: "orientacion-vocacional",
         slug: "orientacion-vocacional-sentido-de-vida",
@@ -987,6 +1743,116 @@ const symptoms = [
             ]
         }
     },
+    // ─── CATEGORY 2: Relaciones Interpersonales y Vínculos ────────────
+    {
+        id: "rupturas-amorosas",
+        slug: "rupturas-amorosas-y-relaciones-a-distancia",
+        name: "Rupturas Amorosas y Relaciones a Distancia",
+        description: "El fin de un noviazgo o los desafíos de mantener un vínculo afectivo cuando hay kilómetros de por medio son detonantes frecuentes de consulta. Los jóvenes buscan herramientas para gestionar los celos, la incertidumbre, la falta de contacto físico o, en su defecto, para aprender a superar la dependencia emocional tras una separación.",
+        causes: [
+            "Falta de comunicación afectiva clara o infidelidades en la pareja",
+            "Estrés físico y emocional provocado por la distancia física",
+            "Dificultades para asimilar el fin del ciclo de relación y apego ansioso"
+        ],
+        whyConsult: "Te doto de herramientas prácticas para procesar la separación de manera saludable, establecer un contacto cero constructivo si es necesario, y aprender a regular la ansiedad que genera la distancia.",
+        relatedConditions: [
+            "ansiedad-generalizada",
+            "depresion-mayor"
+        ],
+        image: "/images/symptom-rupture.jpg",
+        seo: {
+            title: "Superar Rupturas Amorosas y Distancia | Psic. Beto Luna",
+            description: "Aprende a gestionar el duelo por ruptura amorosa o los celos en relaciones a distancia con terapia psicológica en Tuxtla Gutiérrez.",
+            keywords: [
+                "Superar una ruptura",
+                "Relación a distancia consejos",
+                "Dependencia emocional psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
+    {
+        id: "conflictos-familiares",
+        slug: "conflictos-familiares-y-limites-padres",
+        name: "Conflictos Familiares y Límites con los Padres",
+        description: "Para los adultos jóvenes, aprender a convivir con la familia de origen o lograr la independencia emocional (y económica) es un reto. El motivo de consulta suele ser cómo aprender a decir 'no', cómo poner límites sanos a padres sobreprotectores o invasivos, y cómo sanar heridas de la infancia sin cortar el vínculo familiar.",
+        causes: [
+            "Expectativas y demandas parentales que chocan con la autonomía del hijo",
+            "Patrones de comunicación pasivo-agresivos o de sobreprotección invasiva",
+            "Dificultades en el proceso de individuación y emancipación emocional"
+        ],
+        whyConsult: "La psicoterapia te ayuda a desarrollar una asertividad firme para comunicar tus límites con amor, sin culpas y resguardando tu estabilidad mental e individualidad.",
+        relatedConditions: [
+            "ansiedad-generalizada",
+            "trastorno-de-adaptacion"
+        ],
+        image: "/images/symptom-family.jpg",
+        seo: {
+            title: "Límites con Padres y Conflictos Familiares | Beto Luna",
+            description: "Establece límites asertivos con tus padres y sana dinámicas familiares invasivas. Terapia de apoyo familiar en Tuxtla.",
+            keywords: [
+                "Límites familiares",
+                "Independencia emocional padres",
+                "Sanar heridas infancia",
+                "Beto Luna psicólogo"
+            ]
+        }
+    },
+    {
+        id: "soledad-cronica",
+        slug: "dificultad-para-relacionarse-y-soledad-cronica",
+        name: "Dificultad para Relacionarse y Soledad Crónica",
+        description: "A pesar de estar más conectados que nunca en redes sociales, la sensación de aislamiento y la falta de conexiones profundas es una epidemia silenciosa. Las personas buscan terapia porque se sienten solas, les cuesta hacer nuevos amigos en la adultez o experimentan una profunda torpeza social que les impide abrirse con los demás.",
+        causes: [
+            "Miedo persistente al rechazo o a la crítica interpersonal",
+            "Falta de espacios y habilidades de socialización en el entorno adulto",
+            "Dependencia de la interacción digital que debilita las habilidades cara a cara"
+        ],
+        whyConsult: "A través del entrenamiento en asertividad y habilidades interpersonales, aprenderás a desmontar pensamientos de desaprobación y a entablar conexiones reales.",
+        relatedConditions: [
+            "fobia-social",
+            "trastorno-personalidad-evitativa"
+        ],
+        image: "/images/symptom-solitude.jpg",
+        seo: {
+            title: "Soledad Crónica y Habilidades Sociales | Beto Luna",
+            description: "Supera la soledad crónica y la torpeza social. Aprende a crear relaciones profundas y asertivas en Tuxtla Gutiérrez.",
+            keywords: [
+                "Soledad crónica terapia",
+                "Cómo hacer amigos de adulto",
+                "Torpeza social psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
+    // ─── CATEGORY 3: Rendimiento, Trabajo y Presión Social ────────────
+    {
+        id: "burnout",
+        slug: "sindrome-de-burnout-agotamiento-laboral",
+        name: "Síndrome de Burnout (Agotamiento Laboral)",
+        description: "Adultos que llegan a consulta completamente exhaustos, cínicos hacia su trabajo y sintiéndose ineficaces. El estrés crónico de las jornadas laborales, la incapacidad para desconectarse del teléfono y la sobrecarga de tareas terminan desgastando la salud física y mental, requiriendo un proceso de reconstrucción de hábitos.",
+        causes: [
+            "Jornadas laborales extenuantes y demandas de conectividad 24/7",
+            "Ambientes de trabajo tóxicos, competitivos o de nulo reconocimiento",
+            "Falta de límites personales entre la vida laboral y la privada"
+        ],
+        whyConsult: "La terapia de burnout te dota de estrategias de desconexión cognitiva, reorganización de prioridades de vida y establecimiento de límites en tu espacio de trabajo.",
+        relatedConditions: [
+            "ansiedad-generalizada",
+            "depresion-mayor"
+        ],
+        image: "/images/symptom-burnout.jpg",
+        seo: {
+            title: "Tratamiento de Síndrome de Burnout en Tuxtla | Beto Luna",
+            description: "Recupera tu energía y supera el estrés por agotamiento laboral (burnout). Terapia cognitiva y manejo de límites en Chiapas.",
+            keywords: [
+                "Síndrome de burnout Tuxtla",
+                "Estrés laboral tratamiento",
+                "Agotamiento crónico psicólogo",
+                "Beto Luna"
+            ]
+        }
+    },
     {
         id: "procrastinacion-extrema",
         slug: "procrastinacion-y-organizacion",
@@ -1018,7 +1884,7 @@ const symptoms = [
     {
         id: "autoexigencia-destructiva",
         slug: "autoexigencia-y-sindrome-impostor",
-        name: "Autoexigencia Destructiva y Síndrome del Impostor",
+        name: "Autoexigencia Destructiva y el 'Síndrome del Impostor'",
         description: "Perfil de jóvenes sumamente brillantes que, sin importar cuántos títulos o logros acumulen, sienten que están engañando a todo el mundo y que en cualquier momento 'los van a descubrir'. La incapacidad de internalizar sus propios éxitos los lleva a vivir en un estado de alerta y perfeccionismo paralizante.",
         causes: [
             "Estilos de crianza basados en el condicionamiento del afecto al logro escolar/deportivo",
@@ -1038,10 +1904,11 @@ const symptoms = [
                 "síndrome del impostor",
                 "autoexigencia",
                 "perfeccionismo",
-                "autoestima laboral"
+                "autoesteem laboral"
             ]
         }
     },
+    // ─── CATEGORY 4: Gestión Emocional y Autoestima ───────────────────
     {
         id: "baja-autoestima-e-inseguridad",
         slug: "baja-autoestima-e-inseguridad-corporal",
@@ -1093,6 +1960,61 @@ const symptoms = [
                 "control de impulsos",
                 "regulación afectiva",
                 "inteligencia emocional"
+            ]
+        }
+    },
+    {
+        id: "gestion-ira",
+        slug: "gestion-de-la-ira-y-frustracion",
+        name: "Gestión de la Ira y Frustración",
+        description: "Cuando el estrés del día a día sobrepasa los recursos de la persona, la respuesta suele ser la explosión. Adultos que asisten a consulta porque se dan cuenta de que gritan con facilidad, se desesperan ante el menor inconveniente o reaccionan de forma agresiva en el tráfico o el hogar, deteriorando su entorno.",
+        causes: [
+            "Acumulación de estrés y nula expresión de emociones de forma progresiva",
+            "Creencias rígidas de cómo 'deberían' actuar las cosas o personas a tu alrededor",
+            "Baja tolerancia a la frustración y sobrecarga del sistema de alarma corporal"
+        ],
+        whyConsult: "La terapia de manejo de ira te dota de técnicas de desactivación fisiológica inmediata y reestructuración cognitiva de pensamientos hostiles.",
+        relatedConditions: [
+            "ansiedad-generalizada",
+            "trastorno-personalidad-limite"
+        ],
+        image: "/images/symptom-anger.jpg",
+        seo: {
+            title: "Manejo de la Ira y Frustración en Tuxtla | Beto Luna",
+            description: "Aprende a controlar el enojo y las reacciones explosivas. Terapia de asertividad y regulación de la ira en Tuxtla Gutiérrez.",
+            keywords: [
+                "Manejo de la ira Tuxtla",
+                "Control del enojo psicoterapeuta",
+                "Baja tolerancia frustración",
+                "Beto Luna"
+            ]
+        }
+    },
+    // ─── CATEGORY 5: Hábitos y Estilo de Vida ─────────────────────────
+    {
+        id: "dependencia-pantallas",
+        slug: "dependencia-a-las-pantallas-y-redes-sociales",
+        name: "Dependencia a las Pantallas y Redes Sociales",
+        description: "Un motivo de consulta emergente y sumamente común en la actualidad. Jóvenes y adultos que se sienten adictos al scrolleo infinito, que pierden horas de sueño por estar en el celular y cuya salud mental se ve afectada por la dopamina barata de las aplicaciones, buscando un 'detox' guiado y herramientas de autocontrol.",
+        causes: [
+            "Diseño adictivo de las aplicaciones enfocado en la recompensa inmediata",
+            "Uso del scrolleo digital como escape o anestesia de la ansiedad o aburrimiento",
+            "Falta de actividades gratificantes alternativas en el mundo físico"
+        ],
+        whyConsult: "Te acompaño en un proceso estructurado de detox digital y en el rediseño de hábitos saludables para que retomes el control de tu tiempo y atención.",
+        relatedConditions: [
+            "tdah-en-adultos",
+            "ansiedad-generalizada"
+        ],
+        image: "/images/symptom-screen.jpg",
+        seo: {
+            title: "Dependencia al Celular y Redes Sociales | Beto Luna",
+            description: "Detox digital guiado. Supera la adicción a las pantallas y recupera tu concentración con terapia cognitiva en Tuxtla.",
+            keywords: [
+                "Adicción al celular terapia",
+                "Detox redes sociales Tuxtla",
+                "Higiene digital psicólogo",
+                "Beto Luna"
             ]
         }
     },

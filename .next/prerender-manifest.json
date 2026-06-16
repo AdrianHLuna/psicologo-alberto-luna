@@ -170,6 +170,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/enfermedades/ansiedad-por-separacion": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/ansiedad-por-separacion.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/enfermedades/depresion-mayor": {
       "experimentalBypassFor": [
         {
@@ -185,6 +209,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/enfermedades/[slug]",
       "dataRoute": "/enfermedades/depresion-mayor.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/distimia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/distimia.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -218,6 +266,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/enfermedades/fobia-social": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/fobia-social.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/enfermedades/tdah-en-adultos": {
       "experimentalBypassFor": [
         {
@@ -242,6 +314,78 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/enfermedades/trastorno-bipolar": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-bipolar.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-de-adaptacion": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-de-adaptacion.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-de-panico": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-de-panico.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/enfermedades/trastorno-obsesivo-compulsivo": {
       "experimentalBypassFor": [
         {
@@ -257,6 +401,102 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/enfermedades/[slug]",
       "dataRoute": "/enfermedades/trastorno-obsesivo-compulsivo.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-personalidad-evitativa": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-personalidad-evitativa.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-personalidad-limite": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-personalidad-limite.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-por-atracon": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-por-atracon.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/enfermedades/trastorno-sintomas-somaticos": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/enfermedades/[slug]",
+      "dataRoute": "/enfermedades/trastorno-sintomas-somaticos.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -530,6 +770,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/sintomas/conflictos-familiares-y-limites-padres": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/conflictos-familiares-y-limites-padres.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/sintomas/crisis-de-los-20-y-30-anos": {
       "experimentalBypassFor": [
         {
@@ -554,6 +818,54 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/sintomas/dependencia-a-las-pantallas-y-redes-sociales": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/dependencia-a-las-pantallas-y-redes-sociales.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/sintomas/dificultad-para-relacionarse-y-soledad-cronica": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/dificultad-para-relacionarse-y-soledad-cronica.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/sintomas/duelo-y-perdidas-significativas": {
       "experimentalBypassFor": [
         {
@@ -569,6 +881,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/sintomas/[slug]",
       "dataRoute": "/sintomas/duelo-y-perdidas-significativas.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/sintomas/gestion-de-la-ira-y-frustracion": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/gestion-de-la-ira-y-frustracion.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -665,6 +1001,54 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/sintomas/[slug]",
       "dataRoute": "/sintomas/procrastinacion-y-organizacion.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/sintomas/rupturas-amorosas-y-relaciones-a-distancia": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/rupturas-amorosas-y-relaciones-a-distancia.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/sintomas/sindrome-de-burnout-agotamiento-laboral": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/sintomas/[slug]",
+      "dataRoute": "/sintomas/sindrome-de-burnout-agotamiento-laboral.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
