@@ -60,7 +60,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "acompanamiento-crisis-existenciales"],
     relatedSymptoms: ["duelo-y-perdidas", "baja-autoestima-e-inseguridad"],
-    image: "/images/depression.jpg",
+    image: "/transtornos/depresion_mayor.png",
     seo: {
       title: "Tratamiento de Depresión en Tuxtla | Psic. Alberto Luna",
       description: "Supera la depresión y la distimia con psicoterapia cognitivo-conductual en Tuxtla Gutiérrez. Espacio seguro y confidencial.",
@@ -124,7 +124,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "acompanamiento-crisis-existenciales"],
     relatedSymptoms: ["inestabilidad-emocional", "baja-autoestima-e-inseguridad"],
-    image: "/images/dysthymia.jpg",
+    image: "/transtornos/distimia.png",
     seo: {
       title: "Tratamiento de Distimia en Tuxtla | Psic. Alberto Luna",
       description: "Supera la tristeza crónica y el desánimo constante con psicoterapia para la distimia en Tuxtla Gutiérrez. Recupera tu bienestar.",
@@ -188,7 +188,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["inestabilidad-emocional", "insomnio-y-ansiedad"],
-    image: "/images/bipolar.jpg",
+    image: "/transtornos/bipolar.png",
     seo: {
       title: "Acompañamiento en Trastorno Bipolar | Psic. Alberto Luna",
       description: "Acompañamiento psicoterapéutico especializado en el Trastorno Bipolar en Tuxtla. Identifica disparadores y recupera tu estabilidad emocional.",
@@ -255,7 +255,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["insomnio-y-ansiedad", "procrastinacion-extrema"],
-    image: "/images/anxiety.jpg",
+    image: "/transtornos/ansiedad_generalizada.png",
     seo: {
       title: "Tratamiento de Ansiedad en Tuxtla | Psic. Alberto Luna",
       description: "Aprende a regular la ansiedad generalizada y los ataques de pánico con psicoterapia en Tuxtla Gutiérrez. Técnicas de desactivación física.",
@@ -319,7 +319,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["insomnio-y-ansiedad", "inestabilidad-emocional"],
-    image: "/images/panic-attacks.jpg",
+    image: "/transtornos/transtornos_panico.png",
     seo: {
       title: "Tratamiento de Ataques de Pánico en Tuxtla | Psic. Alberto Luna",
       description: "Supera el miedo al miedo y controla los ataques de pánico mediante terapia cognitivo-conductual en Tuxtla Gutiérrez. Técnicas de regulación física.",
@@ -383,7 +383,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "talleres-psicoeducativos"],
     relatedSymptoms: ["autoexigencia-destructiva", "baja-autoestima-e-inseguridad"],
-    image: "/images/social-phobia.jpg",
+    image: "/transtornos/fobia_social.png",
     seo: {
       title: "Tratamiento de Fobia Social en Tuxtla | Psic. Alberto Luna",
       description: "Supera el miedo al rechazo, al juicio y a hablar en público mediante psicoterapia cognitiva en Tuxtla Gutiérrez. Recupera tu confianza social.",
@@ -447,7 +447,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "acompanamiento-crisis-existenciales"],
     relatedSymptoms: ["inestabilidad-emocional", "baja-autoestima-e-inseguridad"],
-    image: "/images/separation-anxiety.jpg",
+    image: "/transtornos/ansiedad_separacion.png",
     seo: {
       title: "Ansiedad por Separación en Adultos | Psic. Alberto Luna",
       description: "Supera la dependencia emocional y el miedo obsesivo a perder a tus seres queridos con psicoterapia especializada en Tuxtla Gutiérrez.",
@@ -514,7 +514,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "acompanamiento-crisis-existenciales"],
     relatedSymptoms: ["duelo-y-perdidas", "inestabilidad-emocional"],
-    image: "/images/trauma.jpg",
+    image: "/transtornos/estres_postraumatico.png",
     seo: {
       title: "Terapia de Estrés Postraumático | Psic. Alberto Luna",
       description: "Supera el trauma, las pesadillas y la hipervigilancia mediante psicoterapia enfocada en Tuxtla Gutiérrez. Recupera tu paz.",
@@ -578,7 +578,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "acompanamiento-crisis-existenciales"],
     relatedSymptoms: ["crisis-cuarto-vida", "duelo-y-perdidas"],
-    image: "/images/adjustment-disorder.jpg",
+    image: "/transtornos/trastorno_adaptacion.png",
     seo: {
       title: "Terapia para Trastornos de Adaptación | Beto Luna",
       description: "Supera el agobio por cambios drásticos de vida (divorcio, mudanza, despido) mediante terapia en Tuxtla Gutiérrez. Aprende a adaptarte.",
@@ -645,7 +645,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["procrastinacion-extrema", "inestabilidad-emocional"],
-    image: "/images/ocd.jpg",
+    image: "/transtornos/obsesivo_compulsivo.png",
     seo: {
       title: "Tratamiento de TOC en Tuxtla | Psic. Alberto Luna",
       description: "Supera el Trastorno Obsesivo Compulsivo y las obsesiones de simetría con terapia EPR en Tuxtla Gutiérrez. Recupera el control de tu tiempo.",
@@ -709,7 +709,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["inestabilidad-emocional", "baja-autoestima-e-inseguridad"],
-    image: "/images/borderline.jpg",
+    image: "/transtornos/personalidad_limite.png",
     seo: {
       title: "Terapia para Trastorno Límite (TLP) en Tuxtla | Beto Luna",
       description: "Espacio psicoterapéutico seguro para la regulación emocional y el tratamiento del TLP en Tuxtla Gutiérrez. Aprende a manejar la impulsividad.",
@@ -773,7 +773,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "talleres-psicoeducativos"],
     relatedSymptoms: ["baja-autoestima-e-inseguridad", "autoexigencia-destructiva"],
-    image: "/images/avoidant-personality.jpg",
+    image: "/transtornos/personalidad_ansiosa_evitativa.png",
     seo: {
       title: "Terapia para Personalidad Evitativa | Psic. Alberto Luna",
       description: "Supera el miedo crónico al rechazo, al ridículo y a la desaprobación social. Psicoterapia adaptada en Tuxtla Gutiérrez.",
@@ -840,7 +840,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["perfiles-vocacionales-metodo-raices-y-alas", "psicoterapia-adultos"],
     relatedSymptoms: ["procrastinacion-extrema", "autoexigencia-destructiva"],
-    image: "/images/adhd.jpg",
+    image: "/transtornos/tdah_adultos.png",
     seo: {
       title: "Tratamiento de TDAH en Adultos | Psic. Alberto Luna",
       description: "Diagnóstico y estrategias prácticas contra la procrastinación y desorganización por TDAH en Tuxtla Gutiérrez. Libera tu potencial.",
@@ -904,7 +904,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["inestabilidad-emocional", "baja-autoestima-e-inseguridad"],
-    image: "/images/binge-eating.jpg",
+    image: "/transtornos/atracon.png",
     seo: {
       title: "Tratamiento de Trastorno por Atracón en Tuxtla | Psic. Alberto Luna",
       description: "Supera el comer por ansiedad, la culpa y el atracón crónico mediante terapia cognitiva y alimentación consciente en Tuxtla Gutiérrez.",
@@ -968,7 +968,7 @@ export const diseases: MedicalCondition[] = [
     ],
     relatedServices: ["psicoterapia-adultos", "entrenamiento-regulacion-emocional"],
     relatedSymptoms: ["insomnio-y-ansiedad", "inestabilidad-emocional"],
-    image: "/images/somatic-symptom.jpg",
+    image: "/transtornos/sintomas somaticos.png",
     seo: {
       title: "Terapia para Somatización en Tuxtla | Psic. Alberto Luna",
       description: "Tratamiento de la ansiedad por salud y la somatización del dolor en Tuxtla Gutiérrez. Aprende a calmar tu cuerpo y mente.",

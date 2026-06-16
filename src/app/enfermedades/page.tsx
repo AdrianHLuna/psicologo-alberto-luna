@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { diseases } from "@/data/diseases";
 import { doctor } from "@/data/doctor";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -24,7 +25,7 @@ export default function DiseasesPage() {
   const categories = [
     {
       name: "1. Trastornos del Estado de Ánimo y Afectivos",
-      description: "Fluctuaciones o desbalances persistentes en el humor, la motivación y la energía afectiva.",
+      description: "Fluctuaciones o desbalances persistentes en el humor, la motivación and la energía afectiva.",
       items: diseases.filter(d => ["depresion", "distimia", "trastorno-bipolar"].includes(d.id))
     },
     {
@@ -58,7 +59,7 @@ export default function DiseasesPage() {
         <div className="mt-8 mb-16 text-center">
           <span className="text-teal-700 font-extrabold text-xs uppercase tracking-widest mb-3 inline-block">Áreas de Consulta</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight mb-5">Trastornos Clínicos y Acompañamiento</h1>
-          <p className="text-stone-500 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
+          <p className="text-stone-550 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto">
             Brindamos un espacio confidencial y de sustento empírico para acompañar los diferentes motivos de consulta. Nuestro enfoque no busca etiquetar de manera inamovible, sino comprender y dotar de herramientas prácticas.
           </p>
         </div>
@@ -76,8 +77,14 @@ export default function DiseasesPage() {
                   <FadeUp key={d.id} className="bg-white border border-stone-200/50 p-6 sm:p-8 rounded-3xl shadow-xs hover:border-teal-500/20 transition-all">
                     <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                       <div className="flex gap-4 items-start w-full">
-                        <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 text-xl font-bold border border-teal-100">
-                          <FaBrain />
+                        <div className="w-16 h-16 rounded-2xl bg-stone-100 flex items-center justify-center shrink-0 border border-stone-200/50 overflow-hidden relative">
+                          <Image
+                            src={d.image}
+                            alt={d.name}
+                            fill
+                            sizes="(max-width: 768px) 64px, 64px"
+                            className="object-cover transition-transform duration-300 hover:scale-105"
+                          />
                         </div>
                         <div className="flex-1 min-w-0">
                           <span className="text-[10px] font-extrabold text-teal-600 uppercase tracking-widest block mb-1">Acompañamiento Clínico</span>

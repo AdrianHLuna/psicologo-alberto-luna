@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { diseases } from "@/data/diseases";
 import { doctor } from "@/data/doctor";
@@ -82,6 +83,16 @@ export default async function DiseaseDetailPage({ params }: PageProps) {
           <div className="lg:col-span-8 space-y-8">
             {/* Description & Stats */}
             <FadeUp className="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/50 shadow-xs">
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden mb-6 border border-stone-100 shadow-sm">
+                <Image
+                  src={d.image}
+                  alt={d.name}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="object-cover"
+                />
+              </div>
               <h2 className="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2 border-b border-stone-100 pb-3">
                 <FaBrain className="text-teal-600" /> Abordaje Clínico del Trastorno
               </h2>

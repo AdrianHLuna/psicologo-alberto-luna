@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { doctor } from "@/data/doctor";
 import { diseases } from "@/data/diseases";
@@ -289,18 +290,29 @@ export default function HomePage() {
                   </div>
 
                   {/* Right (4 cols) */}
-                  <div className="lg:col-span-4 bg-stone-50 p-6 rounded-2xl border border-stone-200/60">
-                    <h4 className="text-stone-800 font-black text-xs uppercase tracking-widest mb-4">¿Cómo trabajamos?</h4>
-                    <ul className="space-y-4">
-                      {d.treatments.slice(0, 3).map((treat, idx) => (
-                        <li key={idx} className="flex gap-2.5 items-start text-xs text-stone-650 leading-normal">
-                          <span className="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-[10px] shrink-0">
-                            {idx + 1}
-                          </span>
-                          <span>{treat}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="lg:col-span-4 space-y-6">
+                    <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
+                      <Image
+                        src={d.image}
+                        alt={d.name}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 300px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200/60">
+                      <h4 className="text-stone-800 font-black text-xs uppercase tracking-widest mb-4">¿Cómo trabajamos?</h4>
+                      <ul className="space-y-4">
+                        {d.treatments.slice(0, 3).map((treat, idx) => (
+                          <li key={idx} className="flex gap-2.5 items-start text-xs text-stone-650 leading-normal">
+                            <span className="w-5 h-5 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold text-[10px] shrink-0">
+                              {idx + 1}
+                            </span>
+                            <span>{treat}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               );
