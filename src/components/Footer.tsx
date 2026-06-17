@@ -41,7 +41,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-stone-400 text-sm mb-6 max-w-sm leading-relaxed">
-              Egresado de la UNAM. Especialista en psicoterapia individual para adolescentes y adultos, orientación vocacional y sentido de vida con enfoque cognitivo-conductual.
+              Egresado de la UNAM. Enfoque en psicoterapia individual para adolescentes y adultos, orientación vocacional y sentido de vida.
             </p>
             <div className="flex flex-col gap-3.5 text-sm">
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-white transition">

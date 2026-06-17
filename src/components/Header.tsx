@@ -11,7 +11,7 @@ export default function Header() {
   const whatsappUrl = `https://wa.me/${doctor.whatsapp.replace(/\D/g, "")}`;
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md shadow-sm border-b border-stone-100">
+    <header className="sticky top-0 z-50 w-full bg-gray backdrop-blur-md shadow-sm border-b border-stone-100">
       {/* Lower License Strip - slate with teal accent */}
       <div className="w-full bg-stone-900 text-stone-300 text-[10px] sm:text-xs py-2 px-6 font-medium tracking-wide">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">

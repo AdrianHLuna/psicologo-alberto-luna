@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { doctor } from "@/data/doctor";
 import { diseases } from "@/data/diseases";
 import { services } from "@/data/services";
@@ -24,6 +24,40 @@ export default function HomePage() {
       setCurrentHero((prev) => (prev + 1) % heroImages.length);
     }, 5000);
     return () => clearInterval(timer);
+  }, []);
+
+  // Certifications carousel
+  const certCerts = doctor.certifications.filter(c => c.logo);
+  const [certIndex, setCertIndex] = useState(0);
+  const [lightboxCert, setLightboxCert] = useState<typeof certCerts[0] | null>(null);
+  const certTrackRef = useRef<HTMLDivElement>(null);
+  const certDrag = useRef({ startX: 0, scrollLeft: 0, dragging: false });
+  const certAutoRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startCertAuto = useCallback(() => {
+    if (certAutoRef.current) clearInterval(certAutoRef.current);
+    certAutoRef.current = setInterval(() => {
+      setCertIndex((prev) => (prev + 1) % certCerts.length);
+    }, 3500);
+  }, [certCerts.length]);
+
+  useEffect(() => {
+    startCertAuto();
+    return () => { if (certAutoRef.current) clearInterval(certAutoRef.current); };
+  }, [startCertAuto]);
+
+  useEffect(() => {
+    const track = certTrackRef.current;
+    if (!track) return;
+    const cardWidth = track.scrollWidth / certCerts.length;
+    track.scrollTo({ left: certIndex * cardWidth, behavior: "smooth" });
+  }, [certIndex, certCerts.length]);
+
+  // Close lightbox on Escape key
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightboxCert(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
 
   // Schema: PsychologyWebPage
@@ -219,22 +253,27 @@ export default function HomePage() {
                   <ul className="space-y-3 font-semibold text-stone-550">
                     {doctor.education.map((e, idx) => (
                       <li key={idx} className="flex gap-2">
-                         <span className="text-teal-600 font-bold">{e.year}</span>
+                        <span className="text-teal-600 font-bold">{e.year}</span>
                         <span>{e.degree} - <span className="font-bold text-stone-700">{e.institution}</span></span>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Acreditaciones y Cursos</h4>
-                  <ul className="space-y-3 font-semibold text-stone-550">
-                    {doctor.certifications.map((c, idx) => (
+                  <h4 className="font-extrabold text-stone-900 uppercase tracking-wider mb-3 border-b border-stone-200 pb-2">Acreditaciones</h4>
+                  <ul className="space-y-2 font-semibold text-stone-550">
+                    {doctor.certifications.slice(0, 3).map((c, idx) => (
                       <li key={idx} className="flex gap-2 items-start">
-                        <span className="text-teal-600">★</span>
-                        <span>{c.name} ({c.institution})</span>
+                        <span className="text-teal-600 shrink-0">★</span>
+                        <span className="leading-snug">{c.name}</span>
                       </li>
                     ))}
                   </ul>
+                  {doctor.certifications.length > 3 && (
+                    <span className="inline-flex items-center gap-1 mt-3 text-[10px] font-extrabold text-teal-700 bg-teal-50 border border-teal-200/60 px-2.5 py-1 rounded-full">
+                      <FaAward size={9} /> +{doctor.certifications.length - 3} acreditaciones más ↓
+                    </span>
+                  )}
                 </div>
               </FadeUp>
             </div>
@@ -261,6 +300,177 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ─── CERTIFICATIONS CAROUSEL SECTION ─── */}
+      <section className="py-20 bg-stone-50 border-y border-stone-200/50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <FadeUp className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-teal-700 font-extrabold text-xs uppercase tracking-widest mb-3 inline-block">
+              Acreditaciones
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-stone-900 tracking-tight mb-4">
+              Formación y Certificaciones
+            </h2>
+            <p className="text-stone-500 text-xs sm:text-sm leading-relaxed">
+              Respaldo académico y clínico que garantiza un acompañamiento psicoterapéutico ético, especializado y de alto estándar.
+            </p>
+          </FadeUp>
+
+          {/* Carousel track */}
+          <div className="relative">
+            {/* Left arrow */}
+            <button
+              aria-label="Certificación anterior"
+              onClick={() => {
+                setCertIndex((prev) => (prev - 1 + certCerts.length) % certCerts.length);
+                startCertAuto();
+              }}
+              className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white border border-stone-200 shadow-md flex items-center justify-center text-stone-600 hover:text-teal-700 hover:border-teal-400 transition-all duration-150 active:scale-90"
+            >
+              ‹
+            </button>
+
+            {/* Right arrow */}
+            <button
+              aria-label="Siguiente certificación"
+              onClick={() => {
+                setCertIndex((prev) => (prev + 1) % certCerts.length);
+                startCertAuto();
+              }}
+              className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-white border border-stone-200 shadow-md flex items-center justify-center text-stone-600 hover:text-teal-700 hover:border-teal-400 transition-all duration-150 active:scale-90"
+            >
+              ›
+            </button>
+
+            {/* Scrollable track */}
+            <div
+              ref={certTrackRef}
+              className="flex gap-6 overflow-x-hidden scroll-smooth mx-8 sm:mx-12"
+              style={{ scrollSnapType: "x mandatory" }}
+              onMouseDown={(e) => {
+                certDrag.current.dragging = true;
+                certDrag.current.startX = e.pageX - (certTrackRef.current?.offsetLeft ?? 0);
+                certDrag.current.scrollLeft = certTrackRef.current?.scrollLeft ?? 0;
+              }}
+              onMouseMove={(e) => {
+                if (!certDrag.current.dragging || !certTrackRef.current) return;
+                e.preventDefault();
+                const x = e.pageX - (certTrackRef.current.offsetLeft ?? 0);
+                const walk = (x - certDrag.current.startX) * 1.5;
+                certTrackRef.current.scrollLeft = certDrag.current.scrollLeft - walk;
+              }}
+              onMouseUp={() => { certDrag.current.dragging = false; }}
+              onMouseLeave={() => { certDrag.current.dragging = false; }}
+            >
+              {certCerts.map((cert, idx) => (
+                <div
+                  key={idx}
+                  style={{ scrollSnapAlign: "center", minWidth: "clamp(220px, 70vw, 280px)" }}
+                  className={`flex-shrink-0 bg-white border rounded-2xl p-4 flex flex-col items-center text-center shadow-sm transition-all duration-500 select-none group ${
+                    idx === certIndex
+                      ? "border-teal-400/60 shadow-teal-100 scale-100 opacity-100"
+                      : "border-stone-200/50 opacity-55 scale-95"
+                  }`}
+                >
+                  {/* Clickable image area → opens lightbox */}
+                  <button
+                    aria-label={`Ver certificación: ${cert.name}`}
+                    onClick={() => { setLightboxCert(cert); if (certAutoRef.current) clearInterval(certAutoRef.current); }}
+                    className="relative w-full rounded-xl overflow-hidden bg-stone-50 border border-stone-100 mb-4 cursor-zoom-in"
+                    style={{ height: "160px" }}
+                  >
+                    <Image
+                      src={cert.logo!}
+                      alt={`Certificación: ${cert.name}`}
+                      fill
+                      sizes="(max-width: 768px) 80vw, 280px"
+                      className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-teal-900/0 group-hover:bg-teal-900/10 transition-colors duration-300 flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-white text-xs font-bold bg-teal-700/80 px-2.5 py-1 rounded-full backdrop-blur-sm">
+                        Ver completo
+                      </span>
+                    </div>
+                  </button>
+                  <div className="flex items-center gap-1.5 mb-1.5">
+                    <FaAward className="text-teal-600 text-xs flex-shrink-0" />
+                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-teal-700">
+                      {cert.year}
+                    </span>
+                  </div>
+                  <h3 className="text-xs font-bold text-stone-900 leading-snug mb-1">
+                    {cert.name}
+                  </h3>
+                  <p className="text-[10px] text-stone-400 leading-relaxed">
+                    {cert.institution}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Dot indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {certCerts.map((_, idx) => (
+                <button
+                  key={idx}
+                  aria-label={`Ir a certificación ${idx + 1}`}
+                  onClick={() => { setCertIndex(idx); startCertAuto(); }}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    idx === certIndex
+                      ? "bg-teal-600 w-6"
+                      : "bg-stone-300 hover:bg-stone-400 w-2"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── LIGHTBOX MODAL ─── */}
+      {lightboxCert && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/85 backdrop-blur-sm animate-fade-in"
+          onClick={() => { setLightboxCert(null); startCertAuto(); }}
+        >
+          <div
+            className="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              aria-label="Cerrar"
+              onClick={() => { setLightboxCert(null); startCertAuto(); }}
+              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-stone-900/10 hover:bg-stone-900/20 flex items-center justify-center text-stone-700 font-bold transition-all text-lg leading-none"
+            >
+              ×
+            </button>
+
+            {/* Image */}
+            <div className="relative w-full bg-stone-50" style={{ height: "420px" }}>
+              <Image
+                src={lightboxCert.logo!}
+                alt={`Certificación: ${lightboxCert.name}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 672px"
+                className="object-contain p-6"
+                priority
+              />
+            </div>
+
+            {/* Info footer */}
+            <div className="px-8 py-5 border-t border-stone-100 flex items-start gap-3">
+              <div className="w-8 h-8 rounded-full bg-teal-50 border border-teal-200 flex items-center justify-center shrink-0">
+                <FaAward className="text-teal-600 text-xs" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-stone-900 leading-snug mb-0.5">{lightboxCert.name}</p>
+                <p className="text-[11px] text-stone-500">{lightboxCert.institution} &bull; {lightboxCert.year}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ─── DISORDERS TABS SECTION (Selector Interactivo de Trastornos) ─── */}
       <section className="py-24 max-w-7xl mx-auto px-6 relative">

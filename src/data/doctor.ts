@@ -20,7 +20,7 @@ export const doctor: DoctorProfile = {
   insurances: ["Reembolso con Aseguradoras Privadas"],
   schedule: "Lunes a Viernes: 09:00 - 13:00 y 16:00 - 21:00 | Sábado: 09:00 - 15:00",
   photo: "/images/doctor.jpg",
-  bio: "El Psicólogo Alberto Luna (Beto Luna) es egresado de la Universidad Nacional Autónoma de México (UNAM). Cuenta con más de 6 años de experiencia en el ámbito de la psicoterapia individual, habiendo acompañado a más de 300 pacientes en procesos clínicos de gestión emocional, ansiedad y depresión. Asimismo, cuenta con una sólida trayectoria en el área de la orientación profesional, con más de 500 evaluaciones vocacionales realizadas bajo su metodología patentada 'Raíces y Alas'. Su enfoque terapéutico es dinámico, analítico y compasivo, proporcionando herramientas concretas para reestructurar pensamientos y sanar las heridas del alma.",
+  bio: "El Psicólogo Alberto Luna es egresado de la Universidad Nacional Autónoma de México (UNAM). Cuenta con más de 6 años de experiencia en el ámbito de la psicoterapia individual, habiendo acompañado a más de 300 pacientes en procesos clínicos de gestión emocional, ansiedad y depresión. Asimismo, cuenta con una sólida trayectoria en el área de la orientación profesional, con más de 500 evaluaciones vocacionales realizadas bajo su metodología patentada 'Raíces y Alas'. Su enfoque terapéutico es dinámico, analítico y compasivo, proporcionando herramientas concretas para reestructurar pensamientos y sanar las heridas del alma.",
   philosophy: "El proceso de terapia no busca juzgar tus decisiones, sino brindarte la claridad y las herramientas necesarias para comprender su origen, sanar tus heridas y construir un proyecto de vida con significado y libertad.",
   experience: [
     {
@@ -41,21 +41,57 @@ export const doctor: DoctorProfile = {
   ],
   certifications: [
     {
-      name: "Licenciatura en Psicología por la Universidad Nacional Autónoma de México",
-      institution: "UNAM",
-      year: "2018"
+      name: "Diplomado en Psicoterapia Gestalt y Eneagrama",
+      institution: "Centro Serendipity",
+      year: "2022",
+      logo: "/certification/cert-1.png"
     },
     {
-      name: "Especialista en Evaluación Vocacional y Análisis de Personalidad",
-      institution: "Asociación Mexicana de Orientación Vocacional",
-      year: "2019"
+      name: "Constancia — La Nube como Herramienta Didáctica: Ventajas, Desventajas, Usos y Aplicaciones",
+      institution: "UNAM / DGIRE — Universidad de Ciencia y Tecnología Descartes",
+      year: "2021",
+      logo: "/certification/cert-2.png"
     },
     {
-      name: "Entrenamiento Avanzado en Terapia Cognitivo-Conductual y Eneagrama Clínico",
-      institution: "Centro de Salud Mental y Desarrollo Humano",
-      year: "2021"
+      name: "Constancia — Taller de Educación Socioemocional 2do. Módulo: Autorregulación Emocional y Autonomía",
+      institution: "Universidad de Ciencia y Tecnología Descartes",
+      year: "2020",
+      logo: "/certification/cert-5.png"
+    },
+    {
+      name: "Constancia — Taller de Educación Socioemocional 3er. Módulo: Empatía",
+      institution: "Universidad de Ciencia y Tecnología Descartes",
+      year: "2020",
+      logo: "/certification/cert-6.png"
+    },
+    {
+      name: "Reconocimiento — La Inteligencia Emocional y su Relación con la Educación Socioemocional",
+      institution: "Universidad de Ciencia y Tecnología Descartes / UNAM-SI",
+      year: "2019",
+      logo: "/certification/cert-3.png"
+    },
+    {
+      name: "Constancia — Taller de Educación Socioemocional 1er. Módulo: Autoconocimiento",
+      institution: "Universidad de Ciencia y Tecnología Descartes",
+      year: "2019",
+      logo: "/certification/cert-4.png"
+    },
+    {
+      name: "Reconocimiento René Descartes por Mérito y Excelencia Académica — Promedio más alto (9.57) de la Generación 2015-2019",
+      institution: "Universidad de Ciencia y Tecnología Descartes",
+      year: "2019",
+      logo: "/certification/cert-8.png"
+    },
+    {
+      name: "Constancia — Desarrollo del Interés Científico en el Alumno",
+      institution: "UNAM / DGIRE — Universidad de Ciencia y Tecnología Descartes",
+      year: "2018",
+      logo: "/certification/cert-7.png"
     }
   ],
+
+
+
   education: [
     {
       degree: "Licenciado en Psicología",
